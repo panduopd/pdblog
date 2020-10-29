@@ -146,27 +146,46 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-init" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-在gitlab-ci中使用puppeteer进行e2e测试-基于antd-pro-v5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/init/">init</a>
+      <a class="article-title" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">在gitlab ci中使用puppeteer进行e2e测试(基于antd pro v5)</a>
     </h1>
   
 
         
-        <a href="/2020/10/28/init/" class="archive-article-date">
-  	<time datetime="2020-10-28T09:03:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-28</time>
+        <a href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/" class="archive-article-date">
+  	<time datetime="2020-10-29T07:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="init"><a href="#init" class="headerlink" title="init"></a>init</h1>
+        <blockquote>
+</blockquote>
+<h1 id="基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错："><a href="#基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错：" class="headerlink" title="基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错："></a>基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错：</h1><p><img src="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/error.png" alt="报错"></p>
+<ul>
+<li>本地开发环境没有此问题</li>
+<li>ci使用的docker镜像为node 15 </li>
+<li>查阅资料发现是因为chrome在进行headless测试时,需要安装一些依赖;  <a target="_blank" rel="noopener" href="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker">参考</a></li>
+</ul>
+<h1 id="使用gitlab生成安装有完全依赖的centos镜像-用于ci测试"><a href="#使用gitlab生成安装有完全依赖的centos镜像-用于ci测试" class="headerlink" title="使用gitlab生成安装有完全依赖的centos镜像 用于ci测试"></a>使用gitlab生成安装有完全依赖的centos镜像 用于ci测试</h1><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#镜像保存在gitlab镜像仓库 名称为node-with-chrome</span></span><br><span class="line"><span class="keyword">FROM</span> centos:<span class="number">7</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#chrome在templates中 使用cnpm安装。puppeteer调用时直接指定exec path</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> curl --silent --location https://rpm.nodesource.com/setup_10.x | bash -</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> yum install -y nodejs</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> npm -v</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#chrome依赖</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> yum install pango.x86_64 libXcomposite.x86_64 libXcursor.x86_64 libXdamage.x86_64 libXext.x86_64 libXi.x86_64 libXtst.x86_64 cups-libs.x86_64 libXScrnSaver.x86_64 libXrandr.x86_64 GConf2.x86_64 alsa-lib.x86_64 atk.x86_64 gtk3.x86_64 ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y</span></span><br></pre></td></tr></table></figure>
+
+<p>在antd pro项目中，安装puppeteer </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i puppeteer -S</span><br></pre></td></tr></table></figure>
+<p>修改tests/getBrowser.js 手动指定puppeteer自带的chrome路径作为执行路径</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">let</span> pwd = execSync(<span class="string">`pwd`</span>);</span><br><span class="line">pwd = pwd.toString().trim();</span><br><span class="line"><span class="keyword">const</span> executablePath = pwd + <span class="string">&#x27;/node_modules/_puppeteer@5.4.0@puppeteer/.local-chromium/linux-809590/chrome-linux/chrome&#x27;</span>; <span class="comment">//替换为实际的路径</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">&#x27;puppeteer&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> browser = <span class="keyword">await</span> puppeteer.launch(&#123;</span><br><span class="line">        executablePath, <span class="comment">//</span></span><br><span class="line">        headless:<span class="literal">true</span>, <span class="comment">//</span></span><br><span class="line">        args: [</span><br><span class="line">            <span class="string">&#x27;--disable-gpu&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;--disable-dev-shm-usage&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;--no-first-run&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;--no-zygote&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;--no-sandbox&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更改.gitlab-ci.yml 使用新的centos docker镜像</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">test:</span></span><br><span class="line"><span class="comment"># image: node:15.0.1</span></span><br><span class="line"><span class="attr">image:</span> <span class="string">xxx/images/node-with-chrome</span> <span class="comment">#(gitlab镜像仓库地址)</span></span><br><span class="line"><span class="attr">stage:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line"><span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">download</span></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">npm</span> <span class="string">-v</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">node</span> <span class="string">-v</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">test</span></span><br><span class="line"><span class="attr">when:</span> <span class="string">on_success</span></span><br></pre></td></tr></table></figure>
+
+<p>git提交 进行ci测试<br><img src="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/success.png" alt="success"></p>
+
       
 
       
@@ -179,7 +198,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -189,7 +208,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/28/init/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">展开全文 >></a>
         </p>
       
 
@@ -312,7 +331,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
             
             <div class="clearfix"></div>
