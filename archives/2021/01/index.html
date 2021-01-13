@@ -6,17 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://pdbuz.com">
-  <title>antd pro v5 动态菜单 | 潘铎的博客</title>
+  <title>Archives: 2021/1 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用umi动态路由  删除config&#x2F;config.ts中的routes配置 app.tsx中配置如下123456789101112131415161718192021222324252627282930313233343536import &amp;#123; customMenuData &amp;#125; from &amp;#x27;.&#x2F;services&#x2F;menu&amp;#x27;;&#x2F;&#x2F;----export a">
-<meta property="og:type" content="article">
-<meta property="og:title" content="antd pro v5 动态菜单">
-<meta property="og:url" content="http://pdbuz.com/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/index.html">
+  <meta name="description" content="day day up">
+<meta property="og:type" content="website">
+<meta property="og:title" content="潘铎的博客">
+<meta property="og:url" content="http://pdbuz.com/archives/2021/01/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="使用umi动态路由  删除config&#x2F;config.ts中的routes配置 app.tsx中配置如下123456789101112131415161718192021222324252627282930313233343536import &amp;#123; customMenuData &amp;#125; from &amp;#x27;.&#x2F;services&#x2F;menu&amp;#x27;;&#x2F;&#x2F;----export a">
+<meta property="og:description" content="day day up">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-12-03T08:44:57.000Z">
-<meta property="article:modified_time" content="2020-12-03T10:17:26.891Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="123">
 <meta name="twitter:card" content="summary">
@@ -147,162 +145,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-antd-pro-v5-动态菜单" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      antd pro v5 动态菜单
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/" class="archive-article-date">
+  	<time datetime="2021-01-13T07:55:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/">备选前端规范</a>
     </h1>
   
 
-        
-        <a href="/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/" class="archive-article-date">
-  	<time datetime="2020-12-03T08:44:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<blockquote>
-<p>使用<a target="_blank" rel="noopener" href="https://umijs.org/zh-CN/docs/convention-routing#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1">umi动态路由</a></p>
-</blockquote>
-<p>删除config/config.ts中的routes配置</p>
-<h4 id="app-tsx中配置如下"><a href="#app-tsx中配置如下" class="headerlink" title="app.tsx中配置如下"></a>app.tsx中配置如下</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; customMenuData &#125; <span class="keyword">from</span> <span class="string">&#x27;./services/menu&#x27;</span>;</span><br><span class="line"><span class="comment">//----</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getInitialState</span>(<span class="params"></span>): <span class="title">Promise</span>&lt;</span>&#123;</span><br><span class="line">  <span class="comment">//---</span></span><br><span class="line">  menuData: MenuDataItem[];</span><br><span class="line">  <span class="comment">//---</span></span><br><span class="line">&#125;&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> menuData: MenuDataItem[] = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (history.location.pathname !== <span class="string">&#x27;/user/login&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      menuData = <span class="keyword">await</span> customMenuData();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    menuData: menuData,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> layout = (&#123;</span><br><span class="line">  initialState,</span><br><span class="line">&#125;: &#123;</span><br><span class="line">  initialState: &#123; <span class="comment">/*---*/</span> menuData: MenuDataItem[];&#125;;</span><br><span class="line">&#125;): <span class="function"><span class="params">BasicLayoutProps</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    menuDataRender: <span class="function">() =&gt;</span> initialState.menuData</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<a id="more"></a>
-
-<h4 id="services-menu-获取服务器menu数据"><a href="#services-menu-获取服务器menu数据" class="headerlink" title="services/menu 获取服务器menu数据"></a>services/menu 获取服务器menu数据</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">customMenuData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        &#123;</span><br><span class="line">            path: <span class="string">&#x27;/a&#x27;</span>,</span><br><span class="line">            name: <span class="string">&#x27;a&#x27;</span>,</span><br><span class="line">            exact: <span class="literal">true</span>,</span><br><span class="line">            children: [</span><br><span class="line">                &#123;</span><br><span class="line">                    path: <span class="string">&#x27;/a/b&#x27;</span>,</span><br><span class="line">                    name: <span class="string">&#x27;b&#x27;</span>,</span><br><span class="line">                    children: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            path: <span class="string">&#x27;/a/b/c&#x27;</span>,</span><br><span class="line">                            name: <span class="string">&#x27;c&#x27;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    path: <span class="string">&#x27;/a/e&#x27;</span>,</span><br><span class="line">                    name: <span class="string">&#x27;e&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="根据路由在src-pages下创建对应层次的文件夹"><a href="#根据路由在src-pages下创建对应层次的文件夹" class="headerlink" title="根据路由在src/pages下创建对应层次的文件夹"></a>根据路由在src/pages下创建对应层次的文件夹</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- src</span><br><span class="line">    - pages</span><br><span class="line">        - [lv1]$</span><br><span class="line">            - [lv2]$</span><br><span class="line">                - [lv3]$.tsx</span><br><span class="line">        - <span class="number">404.</span>tsx</span><br><span class="line">        - _layout.tsx</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>所有路由最终匹配到[lv1]/[lv2]/[lv3].tsx<br>路由/a/b/c   props.match.params 的值为 { lv1: a, lv2: b, lv3: c }<br>路由/a/e     params值为 { lv1: a, lv2: e, lv3: undefined }</p>
-<hr>
-<h4 id="umi3-0-动态路由不匹配404的问题：编辑app-tsx-添加："><a href="#umi3-0-动态路由不匹配404的问题：编辑app-tsx-添加：" class="headerlink" title="umi3.0 动态路由不匹配404的问题：编辑app.tsx 添加："></a>umi3.0 动态路由不匹配404的问题：编辑app.tsx 添加：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">patchRoutes</span>(<span class="params">&#123; routes &#125;</span>) </span>&#123;</span><br><span class="line">    routes[<span class="number">0</span>].routes.push(&#123;</span><br><span class="line">        path: <span class="string">&#x27;*&#x27;</span>,</span><br><span class="line">        component: <span class="built_in">require</span>(<span class="string">&#x27;@/pages/404&#x27;</span>).default,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://pdbuz.com/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          备选前端规范
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/11/03/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDreact%E7%BB%84%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">动态加载react组件的一个小问题</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -325,8 +210,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

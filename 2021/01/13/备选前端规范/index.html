@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://pdbuz.com">
-  <title>antd pro v5 动态菜单 | 潘铎的博客</title>
+  <title>备选前端规范 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用umi动态路由  删除config&#x2F;config.ts中的routes配置 app.tsx中配置如下123456789101112131415161718192021222324252627282930313233343536import &amp;#123; customMenuData &amp;#125; from &amp;#x27;.&#x2F;services&#x2F;menu&amp;#x27;;&#x2F;&#x2F;----export a">
+  <meta name="description" content="前端统一使用 airbnb 规范 ESlint - Airbnb Style .eslintrc  在提交代码的 ci 流程中会对代码进行规范验证 请在提交前进行本地验证 npm run lint自定义规范  变量&#x2F;方法&#x2F;类命名 驼峰法 使用有清晰明确含义的英文组合 不允许分号 可以使用 console const 集中定义后需加空行 建议使用 typescript 语义化标签 始终使用 &#x3D;&#x3D;&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="antd pro v5 动态菜单">
-<meta property="og:url" content="http://pdbuz.com/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/index.html">
+<meta property="og:title" content="备选前端规范">
+<meta property="og:url" content="http://pdbuz.com/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="使用umi动态路由  删除config&#x2F;config.ts中的routes配置 app.tsx中配置如下123456789101112131415161718192021222324252627282930313233343536import &amp;#123; customMenuData &amp;#125; from &amp;#x27;.&#x2F;services&#x2F;menu&amp;#x27;;&#x2F;&#x2F;----export a">
+<meta property="og:description" content="前端统一使用 airbnb 规范 ESlint - Airbnb Style .eslintrc  在提交代码的 ci 流程中会对代码进行规范验证 请在提交前进行本地验证 npm run lint自定义规范  变量&#x2F;方法&#x2F;类命名 驼峰法 使用有清晰明确含义的英文组合 不允许分号 可以使用 console const 集中定义后需加空行 建议使用 typescript 语义化标签 始终使用 &#x3D;&#x3D;&#x3D;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-12-03T08:44:57.000Z">
-<meta property="article:modified_time" content="2020-12-03T10:17:26.891Z">
+<meta property="article:published_time" content="2021-01-13T07:55:05.000Z">
+<meta property="article:modified_time" content="2021-01-13T07:55:49.395Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="123">
 <meta name="twitter:card" content="summary">
@@ -147,20 +147,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-antd-pro-v5-动态菜单" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-备选前端规范" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      antd pro v5 动态菜单
+      备选前端规范
     </h1>
   
 
         
-        <a href="/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/" class="archive-article-date">
-  	<time datetime="2020-12-03T08:44:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-03</time>
+        <a href="/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/" class="archive-article-date">
+  	<time datetime="2021-01-13T07:55:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-13</time>
 </a>
         
       </header>
@@ -168,25 +168,25 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<blockquote>
-<p>使用<a target="_blank" rel="noopener" href="https://umijs.org/zh-CN/docs/convention-routing#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1">umi动态路由</a></p>
-</blockquote>
-<p>删除config/config.ts中的routes配置</p>
-<h4 id="app-tsx中配置如下"><a href="#app-tsx中配置如下" class="headerlink" title="app.tsx中配置如下"></a>app.tsx中配置如下</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; customMenuData &#125; <span class="keyword">from</span> <span class="string">&#x27;./services/menu&#x27;</span>;</span><br><span class="line"><span class="comment">//----</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getInitialState</span>(<span class="params"></span>): <span class="title">Promise</span>&lt;</span>&#123;</span><br><span class="line">  <span class="comment">//---</span></span><br><span class="line">  menuData: MenuDataItem[];</span><br><span class="line">  <span class="comment">//---</span></span><br><span class="line">&#125;&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> menuData: MenuDataItem[] = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (history.location.pathname !== <span class="string">&#x27;/user/login&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      menuData = <span class="keyword">await</span> customMenuData();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    menuData: menuData,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> layout = (&#123;</span><br><span class="line">  initialState,</span><br><span class="line">&#125;: &#123;</span><br><span class="line">  initialState: &#123; <span class="comment">/*---*/</span> menuData: MenuDataItem[];&#125;;</span><br><span class="line">&#125;): <span class="function"><span class="params">BasicLayoutProps</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">//---</span></span><br><span class="line">    menuDataRender: <span class="function">() =&gt;</span> initialState.menuData</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<h4 id="services-menu-获取服务器menu数据"><a href="#services-menu-获取服务器menu数据" class="headerlink" title="services/menu 获取服务器menu数据"></a>services/menu 获取服务器menu数据</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">customMenuData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        &#123;</span><br><span class="line">            path: <span class="string">&#x27;/a&#x27;</span>,</span><br><span class="line">            name: <span class="string">&#x27;a&#x27;</span>,</span><br><span class="line">            exact: <span class="literal">true</span>,</span><br><span class="line">            children: [</span><br><span class="line">                &#123;</span><br><span class="line">                    path: <span class="string">&#x27;/a/b&#x27;</span>,</span><br><span class="line">                    name: <span class="string">&#x27;b&#x27;</span>,</span><br><span class="line">                    children: [</span><br><span class="line">                        &#123;</span><br><span class="line">                            path: <span class="string">&#x27;/a/b/c&#x27;</span>,</span><br><span class="line">                            name: <span class="string">&#x27;c&#x27;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    ]</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    path: <span class="string">&#x27;/a/e&#x27;</span>,</span><br><span class="line">                    name: <span class="string">&#x27;e&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="根据路由在src-pages下创建对应层次的文件夹"><a href="#根据路由在src-pages下创建对应层次的文件夹" class="headerlink" title="根据路由在src/pages下创建对应层次的文件夹"></a>根据路由在src/pages下创建对应层次的文件夹</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- src</span><br><span class="line">    - pages</span><br><span class="line">        - [lv1]$</span><br><span class="line">            - [lv2]$</span><br><span class="line">                - [lv3]$.tsx</span><br><span class="line">        - <span class="number">404.</span>tsx</span><br><span class="line">        - _layout.tsx</span><br></pre></td></tr></table></figure>
-
+<h1 id="前端统一使用-airbnb-规范"><a href="#前端统一使用-airbnb-规范" class="headerlink" title="前端统一使用 airbnb 规范"></a>前端统一使用 airbnb 规范</h1><ul>
+<li>ESlint - <a target="_blank" rel="noopener" href="https://github.com/airbnb/javascript/blob/master/linters/.eslintrc">Airbnb Style .eslintrc</a></li>
+</ul>
+<h3 id="在提交代码的-ci-流程中会对代码进行规范验证-请在提交前进行本地验证-npm-run-lint"><a href="#在提交代码的-ci-流程中会对代码进行规范验证-请在提交前进行本地验证-npm-run-lint" class="headerlink" title="在提交代码的 ci 流程中会对代码进行规范验证 请在提交前进行本地验证 npm run lint"></a>在提交代码的 ci 流程中会对代码进行规范验证 请在提交前进行本地验证 npm run lint</h3><p>自定义规范</p>
+<ul>
+<li>变量/方法/类命名 驼峰法 使用有清晰明确含义的英文组合</li>
+<li>不允许分号</li>
+<li>可以使用 console</li>
+<li>const 集中定义后需加空行</li>
+<li>建议使用 typescript</li>
+<li>语义化标签</li>
+<li>始终使用 === 替代 ==</li>
+<li>if/else/switch/for/等结构体后花括号不换行</li>
+</ul>
+<h3 id="eslint-支持-ts-tsx-本地环境或-vscode-remote-环境"><a href="#eslint-支持-ts-tsx-本地环境或-vscode-remote-环境" class="headerlink" title="eslint 支持 ts/tsx (本地环境或 vscode remote 环境)"></a>eslint 支持 ts/tsx (本地环境或 vscode remote 环境)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm i typescript --save-dev</span><br><span class="line">npm i @typescript-eslint/parser --save-dev</span><br><span class="line">npm i @typescript-eslint/eslint-plugin --save-dev</span><br><span class="line">//请务必保持parser和plugin的版本一致</span><br></pre></td></tr></table></figure>
 <hr>
-<p>所有路由最终匹配到[lv1]/[lv2]/[lv3].tsx<br>路由/a/b/c   props.match.params 的值为 { lv1: a, lv2: b, lv3: c }<br>路由/a/e     params值为 { lv1: a, lv2: e, lv3: undefined }</p>
-<hr>
-<h4 id="umi3-0-动态路由不匹配404的问题：编辑app-tsx-添加："><a href="#umi3-0-动态路由不匹配404的问题：编辑app-tsx-添加：" class="headerlink" title="umi3.0 动态路由不匹配404的问题：编辑app.tsx 添加："></a>umi3.0 动态路由不匹配404的问题：编辑app.tsx 添加：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">patchRoutes</span>(<span class="params">&#123; routes &#125;</span>) </span>&#123;</span><br><span class="line">    routes[<span class="number">0</span>].routes.push(&#123;</span><br><span class="line">        path: <span class="string">&#x27;*&#x27;</span>,</span><br><span class="line">        component: <span class="built_in">require</span>(<span class="string">&#x27;@/pages/404&#x27;</span>).default,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
+<p>.eslintrc 配置文件如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">extends</span>: [<span class="string">&quot;airbnb&quot;</span>, <span class="string">&quot;plugin:@typescript-eslint/recommended&quot;</span>],</span><br><span class="line">  globals: &#123;</span><br><span class="line">    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION: <span class="literal">true</span>,</span><br><span class="line">    page: <span class="literal">true</span>,</span><br><span class="line">    REACT_APP_ENV: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  parser: <span class="string">&quot;@typescript-eslint/parser&quot;</span>,</span><br><span class="line">  plugins: [<span class="string">&quot;@typescript-eslint/eslint-plugin&quot;</span>],</span><br><span class="line">  rules: &#123;</span><br><span class="line">    curly: <span class="string">&quot;error&quot;</span>,</span><br><span class="line">    <span class="string">&quot;react/jsx-filename-extension&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;no-console&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;import/extensions&quot;</span>: [<span class="string">&quot;off&quot;</span>, <span class="string">&quot;never&quot;</span>],</span><br><span class="line">    <span class="string">&quot;import/no-unresolved&quot;</span>: [<span class="string">&quot;off&quot;</span>, <span class="string">&quot;never&quot;</span>],</span><br><span class="line">    <span class="string">&quot;@typescript-eslint/no-explicit-any&quot;</span>: [<span class="string">&quot;off&quot;</span>, <span class="string">&quot;never&quot;</span>],</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;no-use-before-define&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@typescript-eslint/no-use-before-define&quot;</span>: [<span class="string">&quot;off&quot;</span>, <span class="string">&quot;never&quot;</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="vscode-配置自动保存-项目根目录-vscode-settings-json"><a href="#vscode-配置自动保存-项目根目录-vscode-settings-json" class="headerlink" title="vscode 配置自动保存 (项目根目录/.vscode/settings.json)"></a>vscode 配置自动保存 (项目根目录/.vscode/settings.json)</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;editor.codeActionsOnSave&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;source.fixAll.eslint&quot;</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;eslint.format.enable&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;eslint.validate&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;javascript&quot;</span>,</span><br><span class="line">    <span class="string">&quot;javascriptreact&quot;</span>,</span><br><span class="line">    <span class="string">&quot;typescript&quot;</span>,</span><br><span class="line">    <span class="string">&quot;html&quot;</span>,</span><br><span class="line">    <span class="string">&quot;typescriptreact&quot;</span>,</span><br><span class="line">    <span class="string">&quot;less&quot;</span>,</span><br><span class="line">    <span class="string">&quot;css&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;eslint.run&quot;</span>: <span class="string">&quot;onSave&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;[javascript]&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -244,7 +244,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://pdbuz.com/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://pdbuz.com/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -258,18 +258,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/13/%E5%A4%87%E9%80%89%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          备选前端规范
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/03/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDreact%E7%BB%84%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">动态加载react组件的一个小问题</div>
+    <a href="/2020/12/03/antd-pro-v5-%E5%8A%A8%E6%80%81%E8%8F%9C%E5%8D%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">antd pro v5 动态菜单</div>
       <i class="icon-circle-right"></i>
     </a>
   
