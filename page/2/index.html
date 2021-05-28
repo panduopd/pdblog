@@ -165,28 +165,37 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-build-your-own-react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-在gitlab-ci中使用puppeteer进行e2e测试-基于antd-pro-v5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/29/build-your-own-react/">build your own react</a>
+      <a class="article-title" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">在gitlab ci中使用puppeteer进行e2e测试(基于antd pro v5)</a>
     </h1>
   
 
         
-        <a href="/2020/10/29/build-your-own-react/" class="archive-article-date">
-  	<time datetime="2020-10-28T19:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
+        <a href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/" class="archive-article-date">
+  	<time datetime="2020-10-29T07:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>—-<a target="_blank" rel="noopener" href="https://pomb.us/build-your-own-react/">Build-your-own-react</a></p>
-
+        <hr>
+<h1 id="基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错："><a href="#基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错：" class="headerlink" title="基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错："></a>基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错：</h1><p><img src="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/error.png" alt="报错"></p>
+<ul>
+<li>本地开发环境没有此问题</li>
+<li>ci使用的docker镜像为node 15 </li>
+<li>查阅资料发现是因为chrome在进行headless测试时,需要安装一些依赖;  <a target="_blank" rel="noopener" href="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker">参考</a></li>
+</ul>
+<h1 id="使用gitlab生成安装有完全依赖的centos镜像-用于ci测试"><a href="#使用gitlab生成安装有完全依赖的centos镜像-用于ci测试" class="headerlink" title="使用gitlab生成安装有完全依赖的centos镜像 用于ci测试"></a>使用gitlab生成安装有完全依赖的centos镜像 用于ci测试</h1>
+        
+          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/#more">more >></a>
+        
       
 
       
@@ -194,22 +203,22 @@
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/29/build-your-own-react/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">展开全文 >></a>
         </p>
       
 
