@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://pdbuz.com">
-  <title>Archives: 2021/6 | 潘铎的博客</title>
+  <title>整理一下react组件的开发流程 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day day up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="潘铎的博客">
-<meta property="og:url" content="http://pdbuz.com/archives/2021/06/index.html">
+  <meta name="description" content="有一个自己写的非受控editable表格组件,原本写在src&#x2F;components中。现在需要提取出来放入本地npm库共享。这里记录一下过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="整理一下react组件的开发流程">
+<meta property="og:url" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="day day up">
+<meta property="og:description" content="有一个自己写的非受控editable表格组件,原本写在src&#x2F;components中。现在需要提取出来放入本地npm库共享。这里记录一下过程。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
+<meta property="og:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp2.png">
+<meta property="article:published_time" content="2021-06-02T07:54:21.000Z">
+<meta property="article:modified_time" content="2021-06-03T08:37:31.660Z">
 <meta property="article:author" content="PPPddd">
-<meta property="article:tag" content="123">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -163,36 +168,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-整理一下react组件的完整开发流程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      整理一下react组件的开发流程
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
+
+        
+        <a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2021-06-02T07:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">整理一下react组件的开发流程</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有一个自己写的非受控editable表格组件,原本写在src/components中。现在需要提取出来放入本地npm库共享。这里记录一下过程。</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>创建仓库RawTable 这个组件使用了typescript,所以需要添加ts的相关支持</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">mkdir /opt/components/RawTable </span><br><span class="line"><span class="built_in">cd</span> /opt/components/RawTable </span><br><span class="line">mkdir src</span><br><span class="line">npm init -y</span><br><span class="line">cp /opt/project_dir/.../src/components/RawTable ./src/</span><br><span class="line">touch webpack.config.js tsconfig.json</span><br><span class="line"></span><br><span class="line">//编辑package.json 添加相关依赖</span><br><span class="line">&#123;</span><br><span class="line">  ....</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;src/index.ts&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack serve --open --mode development&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack --mode production&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;peerDependencies&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;lodash&quot;</span>: <span class="string">&quot;^4.17.21&quot;</span>,</span><br><span class="line">    <span class="string">&quot;react&quot;</span>: <span class="string">&quot;^17.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@types/node&quot;</span>: <span class="string">&quot;^15.9.0&quot;</span>, //有的地方需要使用process.env</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;@babel/core&quot;</span>: <span class="string">&quot;^7.14.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ts-loader&quot;</span>: <span class="string">&quot;^9.2.2&quot;</span>,</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;typescript&quot;</span>: <span class="string">&quot;^4.3.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;webpack&quot;</span>: <span class="string">&quot;^5.37.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;webpack-cli&quot;</span>: <span class="string">&quot;^4.7.0&quot;</span></span><br><span class="line">    ...eslint相关</span><br><span class="line">  &#125;</span><br><span class="line">  ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<p>配置webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> HTMLPlugin = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">&#x27;./src/index.tsx&#x27;</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.resolve(__dirname, <span class="string">&#x27;dist&#x27;</span>),</span><br><span class="line">        filename: <span class="string">&#x27;index.js&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    resolve: &#123;</span><br><span class="line">      extensions: [<span class="string">&#x27;.js&#x27;</span>, <span class="string">&#x27;.ts&#x27;</span>, <span class="string">&#x27;.tsx&#x27;</span>, <span class="string">&#x27;.less&#x27;</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            ... less loader</span><br><span class="line">        ]   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<p>配置tsconfig.json <a target="_blank" rel="noopener" href="https://www.typescriptlang.org/tsconfig">详细配置说明</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;noImplicitAny&quot;</span>: <span class="literal">false</span>, <span class="comment">//开启any</span></span><br><span class="line">      <span class="attr">&quot;outDir&quot;</span>: <span class="string">&quot;build/dist&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;module&quot;</span>: <span class="string">&quot;esnext&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;target&quot;</span>: <span class="string">&quot;esnext&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;lib&quot;</span>: [<span class="string">&quot;esnext&quot;</span>, <span class="string">&quot;dom&quot;</span>],</span><br><span class="line">      <span class="attr">&quot;sourceMap&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">&quot;baseUrl&quot;</span>: <span class="string">&quot;.&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;jsx&quot;</span>: <span class="string">&quot;react&quot;</span>,</span><br><span class="line">      ....</span><br><span class="line">      &quot;strict&quot;: true,</span><br><span class="line">      &quot;paths&quot;: &#123;</span><br><span class="line">        &quot;@/*&quot;: [&quot;./src/*&quot;],</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;include&quot;: [</span><br><span class="line">      &quot;src/**/*&quot;,</span><br><span class="line">    ],</span><br><span class="line">    &quot;exclude&quot;: [&quot;node_modules&quot;, &quot;build&quot;, &quot;dist&quot;, &quot;scripts&quot;, &quot;jest&quot;]</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<br>
+
+<p>这里有一个问题需要注意下, 组件中有加载less的语句： <code>import Style from &#39;./style.less&#39;</code><br>会报错： <code>TS2307: Cannot find module &#39;./style.less&#39; or its corresponding type declarations.</code><br>需要在src下创建一个declaration.d.ts 文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="built_in">module</span> <span class="string">&#x27;*.less&#x27;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> resource: &#123;[key: string]: string&#125;</span><br><span class="line">    <span class="keyword">export</span> = resource</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>名字可以自己取, 这个文件是由上面的tsconfig.json的include属性导入的(<code>&#39;src/**/*&#39;</code>),<br>如果不想要放在src下面, 就需要手动的在include数组配置中加上这个文件的路径</p>
+<br>
+
+<p>配置eslint</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.eslintrc.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">extends</span>: [<span class="string">&#x27;airbnb-base&#x27;</span>],</span><br><span class="line">  parserOptions: &#123;</span><br><span class="line">    ecmaVersion: <span class="number">2020</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  ....</span><br><span class="line">  overrides: [</span><br><span class="line">    &#123;</span><br><span class="line">      files: [<span class="string">&#x27;*.ts&#x27;</span>, <span class="string">&#x27;*.tsx&#x27;</span>],</span><br><span class="line">      parser: <span class="string">&#x27;@typescript-eslint/parser&#x27;</span>,</span><br><span class="line">      ...</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="string">&#x27;react&#x27;</span>, <span class="string">&#x27;import&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  rules: &#123;</span><br><span class="line">    semi: [<span class="string">&#x27;error&#x27;</span>, <span class="string">&#x27;never&#x27;</span>],</span><br><span class="line">    curly: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">    ....</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+
+<p>.npmignore</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.*</span><br><span class="line">*.md</span><br><span class="line">node_modules</span><br><span class="line">demo</span><br><span class="line">tsconfig.json</span><br><span class="line">webpack.config.js</span><br></pre></td></tr></table></figure>
+<p>全部配置完成后 组件文件夹的目录结构是这样的：</p>
+<img src="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
+
+<p>然后可以为组件写单元测试、e2e测试、eslint检测等。<br>全部规范性检测通过后, 就可以发布了。如果不想每次publish都手动进行相关检测, 可以在向git提交时引入ci流水线，<br>发布时先提交git，由ci进行相关检测, 全部通过后自动进行npm publish。我们这里还是进行手动提交。</p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>环境搭建好之后 就可以进行发布了,<br>首先指定当前的组件版本， 在package.json中修改version。<br>然后使用<code>npm run build</code> 生成dist/bundle.js 可以用于script引入<br>为了支持本地开发的typescript提示, 需要将src也提交上去, package.json的main指向了src/index.ts </p>
+<p>build成功后 分别进行git push 与 npm publish（提前设置好cnpm registry）<br>如果是对社区发布公开组件，可以对此组件写一个使用demo<br>（示例最好集中在一个项目，便于进行管理，可以在readme添加link。）<br>发布流程结束，可以进行安装了。 <code>cnmp i -S @scope_name/cus_table@1.5.2</code></p>
+<p>cnpm装好后目录结构是这样的：<br><img src="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp2.png"></p>
+<br>
+
+<h2 id="封装流程"><a href="#封装流程" class="headerlink" title="封装流程"></a>封装流程</h2><p>需要开发的组件众多，而且配置环境基本相同，比如均需要ts支持，测试流程也相同。<br>不可能每次开发一个新组件就做一遍上述操作。这里就有一个流程封装的需求。<br>我们需要找一个脚手架或者自己开发一个，想了一下觉得这个并不复杂，自己造轮子可以把自己需要的流程全部预定进去。<br>也可以很方便的按照新需求进行调整。</p>
+<p>具体的封装脚手架的过程就留到下一篇随笔。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,57 +244,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/" class="archive-article-date">
-  	<time datetime="2021-06-01T02:14:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">手写一个简易的react</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">手写一个简易的react</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -277,8 +366,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
