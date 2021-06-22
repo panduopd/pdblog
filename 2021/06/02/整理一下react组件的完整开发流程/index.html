@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
 <meta property="og:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp2.png">
 <meta property="article:published_time" content="2021-06-02T07:54:21.000Z">
-<meta property="article:modified_time" content="2021-06-03T08:37:31.660Z">
+<meta property="article:modified_time" content="2021-06-21T10:25:05.249Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -192,28 +192,45 @@
 <a id="more"></a>
 
 <h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>创建仓库RawTable 这个组件使用了typescript,所以需要添加ts的相关支持</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">mkdir /opt/components/RawTable </span><br><span class="line"><span class="built_in">cd</span> /opt/components/RawTable </span><br><span class="line">mkdir src</span><br><span class="line">npm init -y</span><br><span class="line">cp /opt/project_dir/.../src/components/RawTable ./src/</span><br><span class="line">touch webpack.config.js tsconfig.json</span><br><span class="line"></span><br><span class="line">//编辑package.json 添加相关依赖</span><br><span class="line">&#123;</span><br><span class="line">  ....</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;src/index.ts&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack serve --open --mode development&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack --mode production&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;peerDependencies&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;lodash&quot;</span>: <span class="string">&quot;^4.17.21&quot;</span>,</span><br><span class="line">    <span class="string">&quot;react&quot;</span>: <span class="string">&quot;^17.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@types/node&quot;</span>: <span class="string">&quot;^15.9.0&quot;</span>, //有的地方需要使用process.env</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;@babel/core&quot;</span>: <span class="string">&quot;^7.14.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ts-loader&quot;</span>: <span class="string">&quot;^9.2.2&quot;</span>,</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;typescript&quot;</span>: <span class="string">&quot;^4.3.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;webpack&quot;</span>: <span class="string">&quot;^5.37.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;webpack-cli&quot;</span>: <span class="string">&quot;^4.7.0&quot;</span></span><br><span class="line">    ...eslint相关</span><br><span class="line">  &#125;</span><br><span class="line">  ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<br>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir /opt/components/RawTable </span><br><span class="line"><span class="built_in">cd</span> /opt/components/RawTable </span><br><span class="line">mkdir src</span><br><span class="line">npm init -y</span><br><span class="line">cp /opt/project_dir/.../src/components/RawTable ./src/</span><br><span class="line">touch webpack.config.js tsconfig.json</span><br></pre></td></tr></table></figure>
+<details>
+<summary>package.json相关依赖</summary>
 
-<p>配置webpack.config.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  ....</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;src/index.ts&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;webpack serve --open --mode development&quot;</span>,</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack --mode production&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;peerDependencies&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;lodash&quot;</span>: <span class="string">&quot;^4.17.21&quot;</span>,</span><br><span class="line">    <span class="string">&quot;react&quot;</span>: <span class="string">&quot;^17.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@types/node&quot;</span>: <span class="string">&quot;^15.9.0&quot;</span>, //有的地方需要使用process.env</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;@babel/core&quot;</span>: <span class="string">&quot;^7.14.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ts-loader&quot;</span>: <span class="string">&quot;^9.2.2&quot;</span>,</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">&quot;typescript&quot;</span>: <span class="string">&quot;^4.3.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;webpack&quot;</span>: <span class="string">&quot;^5.37.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;webpack-cli&quot;</span>: <span class="string">&quot;^4.7.0&quot;</span></span><br><span class="line">    ...eslint相关</span><br><span class="line">  &#125;</span><br><span class="line">  ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<details>
+<summary>webpack.config.js</summary>
+
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> HTMLPlugin = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">&#x27;./src/index.tsx&#x27;</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.resolve(__dirname, <span class="string">&#x27;dist&#x27;</span>),</span><br><span class="line">        filename: <span class="string">&#x27;index.js&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    resolve: &#123;</span><br><span class="line">      extensions: [<span class="string">&#x27;.js&#x27;</span>, <span class="string">&#x27;.ts&#x27;</span>, <span class="string">&#x27;.tsx&#x27;</span>, <span class="string">&#x27;.less&#x27;</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            ... less loader</span><br><span class="line">        ]   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<br>
+</details>
 
-<p>配置tsconfig.json <a target="_blank" rel="noopener" href="https://www.typescriptlang.org/tsconfig">详细配置说明</a></p>
+<details>
+<summary>tsconfig.json</summary>
+
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;noImplicitAny&quot;</span>: <span class="literal">false</span>, <span class="comment">//开启any</span></span><br><span class="line">      <span class="attr">&quot;outDir&quot;</span>: <span class="string">&quot;build/dist&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;module&quot;</span>: <span class="string">&quot;esnext&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;target&quot;</span>: <span class="string">&quot;esnext&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;lib&quot;</span>: [<span class="string">&quot;esnext&quot;</span>, <span class="string">&quot;dom&quot;</span>],</span><br><span class="line">      <span class="attr">&quot;sourceMap&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">&quot;baseUrl&quot;</span>: <span class="string">&quot;.&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;jsx&quot;</span>: <span class="string">&quot;react&quot;</span>,</span><br><span class="line">      ....</span><br><span class="line">      &quot;strict&quot;: true,</span><br><span class="line">      &quot;paths&quot;: &#123;</span><br><span class="line">        &quot;@/*&quot;: [&quot;./src/*&quot;],</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;include&quot;: [</span><br><span class="line">      &quot;src/**/*&quot;,</span><br><span class="line">    ],</span><br><span class="line">    &quot;exclude&quot;: [&quot;node_modules&quot;, &quot;build&quot;, &quot;dist&quot;, &quot;scripts&quot;, &quot;jest&quot;]</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
-<br>
+</details>
 
 <p>这里有一个问题需要注意下, 组件中有加载less的语句： <code>import Style from &#39;./style.less&#39;</code><br>会报错： <code>TS2307: Cannot find module &#39;./style.less&#39; or its corresponding type declarations.</code><br>需要在src下创建一个declaration.d.ts 文件</p>
+<details>
+<summary>declaration.d.ts</summary>
+
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="built_in">module</span> <span class="string">&#x27;*.less&#x27;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> resource: &#123;[key: string]: string&#125;</span><br><span class="line">    <span class="keyword">export</span> = resource</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
 <p>名字可以自己取, 这个文件是由上面的tsconfig.json的include属性导入的(<code>&#39;src/**/*&#39;</code>),<br>如果不想要放在src下面, 就需要手动的在include数组配置中加上这个文件的路径</p>
-<br>
+<details>
+<summary>配置eslint</summary>
 
-<p>配置eslint</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.eslintrc.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">extends</span>: [<span class="string">&#x27;airbnb-base&#x27;</span>],</span><br><span class="line">  parserOptions: &#123;</span><br><span class="line">    ecmaVersion: <span class="number">2020</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  ....</span><br><span class="line">  overrides: [</span><br><span class="line">    &#123;</span><br><span class="line">      files: [<span class="string">&#x27;*.ts&#x27;</span>, <span class="string">&#x27;*.tsx&#x27;</span>],</span><br><span class="line">      parser: <span class="string">&#x27;@typescript-eslint/parser&#x27;</span>,</span><br><span class="line">      ...</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="string">&#x27;react&#x27;</span>, <span class="string">&#x27;import&#x27;</span>,</span><br><span class="line">  ],</span><br><span class="line">  rules: &#123;</span><br><span class="line">    semi: [<span class="string">&#x27;error&#x27;</span>, <span class="string">&#x27;never&#x27;</span>],</span><br><span class="line">    curly: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">    ....</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<br>
+</details>
 
-<p>.npmignore</p>
+<details>
+<summary>.npmignore</summary>
+
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.*</span><br><span class="line">*.md</span><br><span class="line">node_modules</span><br><span class="line">demo</span><br><span class="line">tsconfig.json</span><br><span class="line">webpack.config.js</span><br></pre></td></tr></table></figure>
+</details>
+
 <p>全部配置完成后 组件文件夹的目录结构是这样的：</p>
 <img src="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
 
@@ -308,6 +325,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          手写一个生成react组件的构建工具
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">手写一个简易的react</div>
@@ -329,6 +355,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">搭建环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E6%B5%81%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">封装流程</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
