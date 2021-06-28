@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
 <meta property="og:image" content="http://pdbuz.com/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp2.png">
 <meta property="article:published_time" content="2021-06-02T07:54:21.000Z">
-<meta property="article:modified_time" content="2021-06-21T10:25:05.249Z">
+<meta property="article:modified_time" content="2021-06-22T01:54:55.649Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -235,7 +235,7 @@
 <img src="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp1.png">
 
 <p>然后可以为组件写单元测试、e2e测试、eslint检测等。<br>全部规范性检测通过后, 就可以发布了。如果不想每次publish都手动进行相关检测, 可以在向git提交时引入ci流水线，<br>发布时先提交git，由ci进行相关检测, 全部通过后自动进行npm publish。我们这里还是进行手动提交。</p>
-<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>环境搭建好之后 就可以进行发布了,<br>首先指定当前的组件版本， 在package.json中修改version。<br>然后使用<code>npm run build</code> 生成dist/bundle.js 可以用于script引入<br>为了支持本地开发的typescript提示, 需要将src也提交上去, package.json的main指向了src/index.ts </p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>环境搭建好之后 就可以进行发布了,<br>首先指定当前的组件版本， 在package.json中修改version。<br>然后使用<code>npm run build</code> 生成dist/bundle.js 可以用于script引入<br>package.json的main指向了src/index.ts </p>
 <p>build成功后 分别进行git push 与 npm publish（提前设置好cnpm registry）<br>如果是对社区发布公开组件，可以对此组件写一个使用demo<br>（示例最好集中在一个项目，便于进行管理，可以在readme添加link。）<br>发布流程结束，可以进行安装了。 <code>cnmp i -S @scope_name/cus_table@1.5.2</code></p>
 <p>cnpm装好后目录结构是这样的：<br><img src="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/reactComp2.png"></p>
 <br>
