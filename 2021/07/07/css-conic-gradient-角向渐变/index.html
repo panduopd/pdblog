@@ -6,18 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://pdbuz.com">
-  <title>潘铎的博客</title>
+  <title>css conic-gradient 角向渐变 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day day up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="潘铎的博客">
-<meta property="og:url" content="http://pdbuz.com/index.html">
+  <meta name="description" content="继linear-gradient&#x2F;radial-gradient 后, css渐变又多了一个conic-gradient。 这是一个实验性的特性, 目前在新版的chrome上可以使用。 参考书目: css secrets">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css conic-gradient 角向渐变">
+<meta property="og:url" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="day day up">
+<meta property="og:description" content="继linear-gradient&#x2F;radial-gradient 后, css渐变又多了一个conic-gradient。 这是一个实验性的特性, 目前在新版的chrome上可以使用。 参考书目: css secrets">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-1.png">
+<meta property="og:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-2.png">
+<meta property="og:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-3.png">
+<meta property="og:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-4.png">
+<meta property="og:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-5.png">
+<meta property="og:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-6.gif">
+<meta property="article:published_time" content="2021-07-07T08:05:01.000Z">
+<meta property="article:modified_time" content="2021-07-07T09:16:34.026Z">
 <meta property="article:author" content="PPPddd">
-<meta property="article:tag" content="123">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-1.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -163,16 +172,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-css-conic-gradient-角向渐变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-css-conic-gradient-角向渐变" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/">css conic-gradient 角向渐变</a>
+    <h1 class="article-title" itemprop="name">
+      css conic-gradient 角向渐变
     </h1>
   
 
@@ -189,553 +196,27 @@
 <p>继linear-gradient/radial-gradient 后, css渐变又多了一个conic-gradient。</p>
 <p>这是一个实验性的特性, 目前在新版的chrome上可以使用。</p>
 <p>参考书目: css secrets</p>
-        
-          <a class="article-more-a" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/#more">more >></a>
-        
-      
+<a id="more"></a>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css-module-global下使用-的解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/06/css-module-global%E4%B8%8B%E4%BD%BF%E7%94%A8-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">css module global下使用&amp;的解决方案</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/06/css-module-global%E4%B8%8B%E4%BD%BF%E7%94%A8-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2021-07-06T08:34:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>问题代码： </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//xx.less</span></span><br><span class="line"><span class="selector-class">.cont</span> &#123;</span><br><span class="line">  <span class="selector-pseudo">:global</span> &#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span><span class="selector-class">.xx</span> &#123;</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//js</span></span><br><span class="line">import Style from &#x27;./xx.less&#x27;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&lt;div className=&#123;Style.cont&#125;&gt;</span><br><span class="line">  &lt;span className=&quot;xx&quot;&gt;xx&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/07/06/css-module-global%E4%B8%8B%E4%BD%BF%E7%94%A8-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/06/css-module-global%E4%B8%8B%E4%BD%BF%E7%94%A8-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-flex为什么没有justify-self" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">flex为什么没有justify-self</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/" class="archive-article-date">
-  	<time datetime="2021-06-28T08:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties">此问题下的第一个答案</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-手写一个生成react组件的构建工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">手写一个生成react组件的构建工具</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-03T08:44:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>书接上文:   <a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">整理一下react组件的开发流程</a></p>
-</blockquote>
-<p>随笔</p>
-<p>打算写一个简易的脚手架，提供一些目录结构生成、server、测试、打包等命令，方便组件编写。（ 所以说懒惰是人类文明进步的真正动力 :)  ）<br>形式上还是采用npm包， 发布在私有npm库中。</p>
-        
-          <a class="article-more-a" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-整理一下react组件的完整开发流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">整理一下react组件的开发流程</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2021-06-02T07:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有一个自己写的非受控editable表格组件,原本写在src/components中。现在需要提取出来放入本地npm库共享。这里记录一下过程。</p>
-        
-          <a class="article-more-a" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-手写一个简易的react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">手写一个简易的react</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/" class="archive-article-date">
-  	<time datetime="2021-06-01T02:14:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>手写一个简单的react,实现了简单的fiber以优化渲染,添加了useState和useEffect的实现<a target="_blank" rel="noopener" href="https://github.com/panduopd/famousLibs">github-&gt;</a></p>
-        
-          <a class="article-more-a" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-手写一个webpack-loader" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/18/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAwebpack-loader/">手写一个webpack loader</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/18/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAwebpack-loader/" class="archive-article-date">
-  	<time datetime="2021-03-18T06:18:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>在开发过程中, 如果有些比较独特的功能无法使用已有的loader转化, 可以尝试自己编写loader<br>这里记录下一个简单的框架 备忘<br><a target="_blank" rel="noopener" href="https://webpack.docschina.org/contribute/writing-a-loader/">相关文档</a></p>
-        
-          <a class="article-more-a" href="/2021/03/18/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAwebpack-loader/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/18/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAwebpack-loader/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-简述（转载）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/17/%E7%AE%80%E8%BF%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/">ast-抽象语法树 简述（转载）</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/17/%E7%AE%80%E8%BF%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-03-17T09:08:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
 <blockquote>
-<p>转自 <a target="_blank" rel="noopener" href="https://itnext.io/ast-for-javascript-developers-3e79aeb08343">AST for JavaScript developers</a></p>
+<p>语法： conic-gradient( from 起始角度 at 中心点位置, 渐变断点 )</p>
 </blockquote>
-<h3 id="Why-Abstract-Syntax-Tree"><a href="#Why-Abstract-Syntax-Tree" class="headerlink" title="Why Abstract Syntax Tree?"></a>Why Abstract Syntax Tree?</h3><p>If you check devDependencies of any modern project, you will see how much it grew for last years. We got literally groups of tools there: JavaScript transpiling, code minification, CSS pre-processors, eslint, prettier, etc. These are JavaScript modules we don’t ship to production, but they do play a very important role in our development process. All these tools, one way or another, built on top of AST processing.</p>
-<img src="/2021/03/17/%E7%AE%80%E8%BF%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/0.png">
+<p>角向渐变可以指定一个中心点(默认容器中心), 沿着这个中心点从起始角度(如不指定就是从正北方向: 0deg)开始,</p>
+<p>旋转360度进行渐变, 又被称为圆锥渐变。 可以指定渐变断点(从0% - 100%, 与linear和radial类似)。</p>
+<h4 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h4><p><code>background: conic-gradient(#58a 0 30%, aqua 0 70%, #0c9 0 100%);</code><br><img src="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-1.png"></p>
+<p>如果指定了一个中心点 比如 <code>background: conic-gradient(at 25% 25%,#58a 0 30%, aqua 0 70%, #0c9 0 100%);</code><br>就会得到一个比较奇特的结果..<br><img src="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-2.png"></p>
+<p>可以体会一下中心点对于角向渐变的作用。</p>
+<h4 id="棋盘"><a href="#棋盘" class="headerlink" title="棋盘"></a>棋盘</h4><p>没有角向渐变的时候, 如果想实现类似棋盘的效果, 需要创建多个背景image, 组合小三角形称为正方形, 调整方块位置等等繁琐的操作。<br><img src="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-3.png"></p>
+<p>使用角向渐变 只需要两行：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: repeating-conic-gradient(<span class="number">#58a</span> <span class="number">0</span> <span class="number">25%</span>, hsla(<span class="number">0</span>,<span class="number">0%</span>,<span class="number">100%</span>, .<span class="number">5</span>) <span class="number">0</span> <span class="number">50%</span>);</span><br><span class="line"><span class="attribute">background-size</span>: <span class="number">10px</span> <span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
+<img src="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-4.png">
 
-<p>There is a plan what I’ll talk about. We are starting from what is AST and how to build it from plain code. Then, we will slightly touch some of the most popular use cases and tools built on top of AST processing. And, I am planning to finish talking about my project js2flowchart, which we will be the good demo what you can build while working with AST. So, be with me and let’s get started.</p>
-        
-          <a class="article-more-a" href="/2021/03/17/%E7%AE%80%E8%BF%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/#more">more >></a>
-        
+<h4 id="色盘"><a href="#色盘" class="headerlink" title="色盘"></a>色盘</h4><p>经典色盘：<code>background: conic-gradient(red, magenta, blue, aqua, lime, yellow, red);</code></p>
+<img src="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-5.png">
+
+<h4 id="来一个角向渐变版的跑马灯边框"><a href="#来一个角向渐变版的跑马灯边框" class="headerlink" title="来一个角向渐变版的跑马灯边框 ~ ~ ~"></a>来一个角向渐变版的跑马灯边框 ~ ~ ~</h4><p><code>&lt;div class=&quot;box colorborder&quot;&gt;&lt;span&gt;123123&lt;/span&gt;&lt;/div&gt;</code></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.colorborder</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">200%</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">200%</span>;</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">top</span>: -<span class="number">50%</span>;</span><br><span class="line">      <span class="attribute">left</span>: -<span class="number">50%</span>;</span><br><span class="line">      <span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">background</span>: conic-gradient(red <span class="number">0</span> <span class="number">10%</span>, magenta <span class="number">0</span> <span class="number">25%</span>, blue <span class="number">0</span> <span class="number">40%</span>, aqua <span class="number">0</span> <span class="number">55%</span>, lime <span class="number">0</span> <span class="number">70%</span>, yellow <span class="number">0</span> <span class="number">85%</span>, red <span class="number">0</span>);</span><br><span class="line">      <span class="attribute">animation</span>: spin <span class="number">0.5s</span> linear infinite reverse;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">      <span class="attribute">width</span>: calc(<span class="number">100%</span> - <span class="number">4px</span>);</span><br><span class="line">      <span class="attribute">height</span>: calc(<span class="number">100%</span> - <span class="number">4px</span>);</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">      <span class="attribute">top</span>: <span class="number">2px</span>;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">2px</span>;</span><br><span class="line">      <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &gt; <span class="selector-tag">span</span> &#123;</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">      <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> spin &#123;</span><br><span class="line">  <span class="selector-tag">100%</span> &#123;<span class="attribute">transform</span>: rotate(<span class="number">1turn</span>);&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img src="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/conic-6.gif">
       
 
       
@@ -757,16 +238,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/17/%E7%AE%80%E8%BF%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://pdbuz.com/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/06/css-module-global%E4%B8%8B%E4%BD%BF%E7%94%A8-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css module global下使用&amp;的解决方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -786,162 +326,14 @@
 
 
 
-
-  
-    <article id="post-A-Complete-Guide-to-useEffect" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/02/A-Complete-Guide-to-useEffect/">A Complete Guide to useEffect</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/02/A-Complete-Guide-to-useEffect/" class="archive-article-date">
-  	<time datetime="2021-03-02T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/">A Complete Guide to useEffect</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/02/A-Complete-Guide-to-useEffect/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="react-fiber结构" class="article article-type-react  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/19/fiber%E7%BB%93%E6%9E%84/">react fiber结构</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/19/fiber%E7%BB%93%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2021-01-19T09:36:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92832843">React16 源码解析(一)- 图解 Fiber 架构</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/19/fiber%E7%BB%93%E6%9E%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -964,8 +356,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
