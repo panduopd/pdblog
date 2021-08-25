@@ -165,6 +165,178 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-浏览器播放rtp流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/">浏览器播放rtp流</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/" class="archive-article-date">
+  	<time datetime="2021-08-25T02:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>webrtc 更方便做浏览器双端通信.</p>
+<p>使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
+<p>点击播放按钮, 浏览器发出ajax请求查询目标视频目录是否已经有相应m3u8文件(其他用户已经请求过此视频id)</p>
+<p>如果有则不需要进行额外的转码动作,直接提取此文件地址</p>
+<p>若此用户为第一个访问者, 在服务端运行上述docker命令开始进行对应rtp流的解析, </p>
+<p>while循环直到目标m3u8文件生成或超时, 更新下此文件当前访问人数(可以使用文件记录) ,返回相应信息到浏览器</p>
+<p>浏览器前端进行报错或者使用video.js开始进行m3u8的播放</p>
+<p>用户关闭浏览器页签时, 通知服务器更新此页面所有已播放视频的访问人数, 若某一视频访问人数为0, 则停止rtp流解析 同时删除对应的m3u8及ts文件</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ncc集成antd的配置项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/05/ncc%E9%9B%86%E6%88%90antd%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9/">ncc集成antd的配置项</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/05/ncc%E9%9B%86%E6%88%90antd%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9/" class="archive-article-date">
+  	<time datetime="2021-08-05T09:55:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<details>
+<summary>引入antd时候没有样式</summary>
+
+<p>根据antd官方描述：</p>
+<p><code>cnmp i -D babel-plugin-import</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.(ts|tsx)$/</span>,</span><br><span class="line">    use: [&#123;</span><br><span class="line">      loader: <span class="string">&#x27;babel-loader&#x27;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        plugins: [</span><br><span class="line">          [<span class="string">&#x27;import&#x27;</span>, &#123; <span class="attr">libraryName</span>: <span class="string">&#x27;antd&#x27;</span>, <span class="attr">style</span>: <span class="string">&#x27;css&#x27;</span> &#125;],</span><br><span class="line">        ],</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      loader: <span class="string">&#x27;ts-loader&#x27;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        allowTsInNodeModules: <span class="literal">true</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;],</span><br><span class="line">&#125;,</span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">  <span class="comment">// exclude: /node_modules/, 不能exclude node_modules</span></span><br><span class="line">  use: [<span class="string">&#x27;style-loader&#x27;</span>, <span class="string">&#x27;css-loader&#x27;</span>],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</details>
+
+<details>
+<summary>process is not defined</summary>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plugins: [</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">    process: <span class="string">&#x27;process/browser&#x27;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</details>
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/05/ncc%E9%9B%86%E6%88%90antd%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css-conic-gradient-角向渐变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -759,156 +931,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/17/%E7%AE%80%E8%BF%B0%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-A-Complete-Guide-to-useEffect" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/02/A-Complete-Guide-to-useEffect/">A Complete Guide to useEffect</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/02/A-Complete-Guide-to-useEffect/" class="archive-article-date">
-  	<time datetime="2021-03-02T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/">A Complete Guide to useEffect</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/02/A-Complete-Guide-to-useEffect/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="react-fiber结构" class="article article-type-react  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/19/fiber%E7%BB%93%E6%9E%84/">react fiber结构</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/19/fiber%E7%BB%93%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2021-01-19T09:36:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92832843">React16 源码解析(一)- 图解 Fiber 架构</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/19/fiber%E7%BB%93%E6%9E%84/">展开全文 >></a>
         </p>
       
 
