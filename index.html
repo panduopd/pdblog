@@ -188,7 +188,7 @@
         <hr>
 <p>webrtc 更方便做浏览器双端通信.</p>
 <p>使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -i ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
 <p>点击播放按钮, 浏览器发出ajax请求查询目标视频目录是否已经有相应m3u8文件(其他用户已经请求过此视频id)</p>
 <p>如果有则不需要进行额外的转码动作,直接提取此文件地址</p>
 <p>若此用户为第一个访问者, 在服务端运行上述docker命令开始进行对应rtp流的解析, </p>

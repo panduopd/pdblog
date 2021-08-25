@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://pdbuz.com">
   <title>浏览器播放rtp流 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="webrtc 更方便做浏览器双端通信. 使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机) 1docker exec -it ffmpeg ffmpeg -i &quot;tcp:&#x2F;&#x2F;xxxx:8088&quot; -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_">
+  <meta name="description" content="webrtc 更方便做浏览器双端通信. 使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机) 1docker exec -i ffmpeg ffmpeg -i &quot;tcp:&#x2F;&#x2F;xxxx:8088&quot; -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器播放rtp流">
 <meta property="og:url" content="http://pdbuz.com/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="webrtc 更方便做浏览器双端通信. 使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机) 1docker exec -it ffmpeg ffmpeg -i &quot;tcp:&#x2F;&#x2F;xxxx:8088&quot; -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_">
+<meta property="og:description" content="webrtc 更方便做浏览器双端通信. 使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机) 1docker exec -i ffmpeg ffmpeg -i &quot;tcp:&#x2F;&#x2F;xxxx:8088&quot; -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_l">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-25T02:07:00.000Z">
-<meta property="article:modified_time" content="2021-08-25T02:30:31.208Z">
+<meta property="article:modified_time" content="2021-08-25T02:42:04.816Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -188,7 +188,7 @@
         <hr>
 <p>webrtc 更方便做浏览器双端通信.</p>
 <p>使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -i ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
 <p>点击播放按钮, 浏览器发出ajax请求查询目标视频目录是否已经有相应m3u8文件(其他用户已经请求过此视频id)</p>
 <p>如果有则不需要进行额外的转码动作,直接提取此文件地址</p>
 <p>若此用户为第一个访问者, 在服务端运行上述docker命令开始进行对应rtp流的解析, </p>
