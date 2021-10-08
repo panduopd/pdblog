@@ -16,7 +16,7 @@
 <meta property="og:description" content="问题代码：  123456789101112131415&#x2F;&#x2F;xx.less.cont &amp;#123;  :global &amp;#123;    &amp;.xx &amp;#123;      ...    &amp;#125;  &amp;#125;&amp;#125;&#x2F;&#x2F;jsimport Style from &amp;#x27;.&#x2F;xx.less&amp;#x27;...&lt;div className&#x3D;&amp;#123;Style.cont&amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-06T08:34:48.000Z">
-<meta property="article:modified_time" content="2021-07-06T08:35:39.658Z">
+<meta property="article:modified_time" content="2021-10-08T06:31:41.584Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -192,8 +192,8 @@
 
 <p>报错为 <code>Error: Missing whitespace after :global</code></p>
 <p>查询了下 发现是因为global下的<code>&amp;</code>不生效,找不到.cont</p>
-<p>解决方案: 在global下添加一层<code>:local(.local-parent)</code></p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.cont</span> &#123;</span><br><span class="line">  <span class="selector-pseudo">:global</span> &#123;</span><br><span class="line">    <span class="selector-pseudo">:local(.local-parent)</span>&#123;</span><br><span class="line">      <span class="selector-tag">&amp;</span><span class="selector-class">.xx</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解决方案: 在global下添加一层<code>:local(.cont)</code></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.cont</span> &#123;</span><br><span class="line">  <span class="selector-pseudo">:global</span> &#123;</span><br><span class="line">    <span class="selector-pseudo">:local(.cont)</span>&#123;</span><br><span class="line">      <span class="selector-tag">&amp;</span><span class="selector-class">.xx</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
