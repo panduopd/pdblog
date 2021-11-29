@@ -16,7 +16,7 @@
 <meta property="og:description" content="鉴于前端ci过程npm i过于漫长(本地使用verdaccio搭建仓库， node_modules依赖过多，1个多g)， 即使走局域网也要几分钟。 而多个产品线全部为基于umi antd的相同架构， 且ui库版本不经常变动， 所以决定将所有基础库写入镜像， ci时只安装必要的私有库。 生成node镜像的文件夹中的package.json包含了所有的基础库， eslint和babel等环境库，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-11-11T07:54:59.000Z">
-<meta property="article:modified_time" content="2021-11-29T06:36:22.618Z">
+<meta property="article:modified_time" content="2021-11-29T06:44:03.188Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -197,6 +197,10 @@
 <p>ci.yml配置在cnpm i之前<code>ln -s /nc-npm-lib/node_modules .</code></p>
 <p>以lint阶段为例，总耗时由7分钟降至40秒。</p>
 <p>若后续由基础组件版本升级， 调整公共镜像即可。</p>
+<hr>
+<p>本地开发同样使用 NodeWithBasicLib 镜像， 调整下docker-compose配置, 容器启动命令更改下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;chmod -R 777 /app &amp;&amp; cd /app &amp;&amp; (ls node_modules &gt; /dev/null 2&gt;&amp;1 ||( echo &#x27;初始化npm库.. 耗时1分钟左右&#x27; &amp;&amp; cp -r /nc-npm-lib/node_modules . &amp;&amp; cnpm i)) &amp;&amp; npm run start:dev&quot;</span></span><br></pre></td></tr></table></figure>
+<p>本地更新package.json直接重启docker容器即可。</p>
 
       
 
