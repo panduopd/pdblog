@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://panduo.site">
-  <title>潘铎的博客</title>
+  <title>基于相同基础ui库的ci过程优化 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day day up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="潘铎的博客">
-<meta property="og:url" content="http://panduo.site/index.html">
+  <meta name="description" content="鉴于前端ci过程npm i过于漫长(本地使用verdaccio搭建仓库, node_modules依赖过多, 1个多g), 即使走局域网也要几分钟。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于相同基础ui库的ci过程优化">
+<meta property="og:url" content="http://panduo.site/2021/11/11/%E5%9F%BA%E4%BA%8E%E7%9B%B8%E5%90%8C%E5%9F%BA%E7%A1%80ui%E5%BA%93%E7%9A%84ci%E8%BF%87%E7%A8%8B%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="day day up">
+<meta property="og:description" content="鉴于前端ci过程npm i过于漫长(本地使用verdaccio搭建仓库, node_modules依赖过多, 1个多g), 即使走局域网也要几分钟。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-11T07:54:59.000Z">
+<meta property="article:modified_time" content="2021-11-11T10:43:59.941Z">
 <meta property="article:author" content="PPPddd">
-<meta property="article:tag" content="123">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
   
@@ -163,91 +165,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-flex-grow与flex-shrink" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-基于相同基础ui库的ci过程优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/29/flex-grow%E4%B8%8Eflex-shrink/">flex-grow与flex-shrink</a>
-    </h1>
-  
-
-        
-        <a href="/2021/11/29/flex-grow%E4%B8%8Eflex-shrink/" class="archive-article-date">
-  	<time datetime="2021-11-29T01:52:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24372279">flex属性</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/29/flex-grow%E4%B8%8Eflex-shrink/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-基于相同基础ui库的ci过程优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/11/%E5%9F%BA%E4%BA%8E%E7%9B%B8%E5%90%8C%E5%9F%BA%E7%A1%80ui%E5%BA%93%E7%9A%84ci%E8%BF%87%E7%A8%8B%E4%BC%98%E5%8C%96/">基于相同基础ui库的ci过程优化</a>
+    <h1 class="article-title" itemprop="name">
+      基于相同基础ui库的ci过程优化
     </h1>
   
 
@@ -284,16 +209,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/11/%E5%9F%BA%E4%BA%8E%E7%9B%B8%E5%90%8C%E5%9F%BA%E7%A1%80ui%E5%BA%93%E7%9A%84ci%E8%BF%87%E7%A8%8B%E4%BC%98%E5%8C%96/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://panduo.site/2021/11/11/%E5%9F%BA%E4%BA%8E%E7%9B%B8%E5%90%8C%E5%9F%BA%E7%A1%80ui%E5%BA%93%E7%9A%84ci%E8%BF%87%E7%A8%8B%E4%BC%98%E5%8C%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/11/29/flex-grow%E4%B8%8Eflex-shrink/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          flex-grow与flex-shrink
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">echarts-全国城市地图</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -313,645 +306,14 @@
 
 
 
-
-  
-    <article id="post-echarts-全国城市地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/">echarts-全国城市地图</a>
-    </h1>
-  
-
-        
-        <a href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/" class="archive-article-date">
-  	<time datetime="2021-11-02T09:16:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>echarts全国城市地图注册</p>
-<p>json转js批量操作</p>
-<p><a target="_blank" rel="noopener" href="https://download.csdn.net/download/weixin_39150852/12267613">json下载地址</a></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">  <span class="variable">$dirPath</span> = <span class="string">&#x27;/opt/ncompass/web/ncompass/public/assets/js/echarts/&#x27;</span>;</span><br><span class="line">  <span class="variable">$dir</span> = <span class="variable">$dirPath</span>.<span class="string">&#x27;cities/&#x27;</span>;</span><br><span class="line">  <span class="variable">$citysMapping</span> = file_get_contents(<span class="variable">$dir</span>.<span class="string">&#x27;china-main-city-map.js&#x27;</span>);</span><br><span class="line">  <span class="variable">$citysMapping</span> = str_replace([<span class="string">&#x27;var cityMap = &#x27;</span>, <span class="string">&#x27;// ??&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>,PHP_EOL], <span class="string">&#x27;&#x27;</span>, <span class="variable">$citysMapping</span>);</span><br><span class="line">  <span class="variable">$citysMapping</span> = json_decode(<span class="variable">$citysMapping</span>);</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fileTarget</span> = <span class="variable">$dirPath</span>.<span class="string">&#x27;citiesJs/&#x27;</span>;</span><br><span class="line">  <span class="keyword">foreach</span> (<span class="variable">$citysMapping</span> <span class="keyword">as</span> <span class="variable">$city_name</span> =&gt; <span class="variable">$city_code</span>) &#123;</span><br><span class="line">    <span class="variable">$city_name</span> = str_replace([<span class="string">&#x27;县&#x27;</span>,<span class="string">&#x27;市&#x27;</span>], <span class="string">&#x27;&#x27;</span>, <span class="variable">$city_name</span>);</span><br><span class="line">    <span class="variable">$json</span> = file_get_contents(<span class="variable">$dir</span>.<span class="variable">$city_code</span>.<span class="string">&#x27;.json&#x27;</span>);</span><br><span class="line">    <span class="variable">$partern</span> = <span class="string">&#x27;/[\x&#123;00a0&#125;\x&#123;1680&#125;\x&#123;2000&#125;-\x&#123;200a&#125;\x&#123;2028&#125;\x&#123;2029&#125;\x&#123;202f&#125;\x&#123;205f&#125;\x&#123;3000&#125;\x&#123;feff&#125;\x&#123;2060&#125;\x&#123;3164&#125;]/u&#x27;</span>; <span class="comment">//去除bom头</span></span><br><span class="line">    <span class="variable">$json</span> = preg_replace(<span class="variable">$partern</span>, <span class="string">&#x27;&#x27;</span>, <span class="variable">$json</span>);</span><br><span class="line">    <span class="comment">// dd($json);</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="variable">$json</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="variable">$newJSFormat</span> = &lt;&lt;&lt;AAA</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params">root, factory</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (typeof define === <span class="string">&#x27;function&#x27;</span> &amp;&amp; define.amd) &#123;</span><br><span class="line">        <span class="comment">// AMD. Register as an anonymous module.</span></span><br><span class="line">        define([<span class="string">&#x27;exports&#x27;</span>, <span class="string">&#x27;echarts&#x27;</span>], factory);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (typeof exports === <span class="string">&#x27;object&#x27;</span> &amp;&amp; typeof exports.nodeName !== <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// CommonJS</span></span><br><span class="line">        factory(exports, <span class="keyword">require</span>(<span class="string">&#x27;echarts&#x27;</span>));</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Browser globals</span></span><br><span class="line">        factory(&#123;&#125;, root.echarts);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;(this, <span class="function"><span class="keyword">function</span> (<span class="params">exports, echarts</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (typeof console !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">          console &amp;&amp; console.<span class="built_in">error</span> &amp;&amp; console.<span class="built_in">error</span>(msg);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!echarts) &#123;</span><br><span class="line">        log(<span class="string">&#x27;ECharts is not Loaded&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!echarts.registerMap) &#123;</span><br><span class="line">        log(<span class="string">&#x27;ECharts Map is not loaded&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      echarts.registerMap(<span class="string">&#x27;$&#123;city_name&#125;&#x27;</span>,$&#123;json&#125;)</span><br><span class="line">    &#125;));</span><br><span class="line">AAA;</span><br><span class="line">    <span class="variable">$filename</span> = <span class="variable">$fileTarget</span>.<span class="variable">$city_code</span>.<span class="string">&#x27;.js&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span>(!file_exists(<span class="variable">$filename</span>)) &#123;</span><br><span class="line">      @file_put_contents(<span class="variable">$filename</span>, <span class="variable">$newJSFormat</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-浏览器播放rtp流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/">浏览器播放rtp流</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/" class="archive-article-date">
-  	<time datetime="2021-08-25T02:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>webrtc 更方便做浏览器双端通信.</p>
-<p>使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -i ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
-<p>点击播放按钮, 浏览器发出ajax请求查询目标视频目录是否已经有相应m3u8文件(其他用户已经请求过此视频id)</p>
-<p>如果有则不需要进行额外的转码动作,直接提取此文件地址</p>
-<p>若此用户为第一个访问者, 在服务端运行上述docker命令开始进行对应rtp流的解析, </p>
-<p>while循环直到目标m3u8文件生成或超时, 更新下此文件当前访问人数(可以使用文件记录) ,返回相应信息到浏览器</p>
-<p>浏览器前端进行报错或者使用video.js开始进行m3u8的播放</p>
-<p>用户关闭浏览器页签时, 通知服务器更新此页面所有已播放视频的访问人数, 若某一视频访问人数为0, 则停止rtp流解析 同时删除对应的m3u8及ts文件</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ncc集成antd的配置项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/05/ncc%E9%9B%86%E6%88%90antd%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9/">ncc集成antd的配置项</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/05/ncc%E9%9B%86%E6%88%90antd%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9/" class="archive-article-date">
-  	<time datetime="2021-08-05T09:55:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<details>
-<summary>引入antd时候没有样式</summary>
-
-<p>根据antd官方描述：</p>
-<p><code>cnmp i -D babel-plugin-import</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.(ts|tsx)$/</span>,</span><br><span class="line">    use: [&#123;</span><br><span class="line">      loader: <span class="string">&#x27;babel-loader&#x27;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        plugins: [</span><br><span class="line">          [<span class="string">&#x27;import&#x27;</span>, &#123; <span class="attr">libraryName</span>: <span class="string">&#x27;antd&#x27;</span>, <span class="attr">style</span>: <span class="string">&#x27;css&#x27;</span> &#125;],</span><br><span class="line">        ],</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      loader: <span class="string">&#x27;ts-loader&#x27;</span>,</span><br><span class="line">      options: &#123;</span><br><span class="line">        allowTsInNodeModules: <span class="literal">true</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;],</span><br><span class="line">&#125;,</span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">  <span class="comment">// exclude: /node_modules/, 不能exclude node_modules</span></span><br><span class="line">  use: [<span class="string">&#x27;style-loader&#x27;</span>, <span class="string">&#x27;css-loader&#x27;</span>],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-</details>
-
-<details>
-<summary>process is not defined</summary>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plugins: [</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">    process: <span class="string">&#x27;process/browser&#x27;</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-</details>
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/05/ncc%E9%9B%86%E6%88%90antd%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css-conic-gradient-角向渐变" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/">css conic-gradient 角向渐变</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/" class="archive-article-date">
-  	<time datetime="2021-07-07T08:05:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>继linear-gradient/radial-gradient 后, css渐变又多了一个conic-gradient。</p>
-<p>这是一个实验性的特性, 目前在新版的chrome上可以使用。</p>
-<p>参考书目: css secrets</p>
-        
-          <a class="article-more-a" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-flex为什么没有justify-self" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">flex为什么没有justify-self</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/" class="archive-article-date">
-  	<time datetime="2021-06-28T08:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties">此问题下的第一个答案</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-手写一个生成react组件的构建工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">手写一个生成react组件的构建工具</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-03T08:44:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>书接上文:   <a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">整理一下react组件的开发流程</a></p>
-</blockquote>
-<p>随笔</p>
-<p>打算写一个简易的脚手架，提供一些目录结构生成、server、测试、打包等命令，方便组件编写。（ 所以说懒惰是人类文明进步的真正动力 :)  ）<br>形式上还是采用npm包， 发布在私有npm库中。</p>
-        
-          <a class="article-more-a" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-整理一下react组件的完整开发流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">整理一下react组件的开发流程</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2021-06-02T07:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有一个自己写的非受控editable表格组件,原本写在src/components中。现在需要提取出来放入本地npm库共享。这里记录一下过程。</p>
-        
-          <a class="article-more-a" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-手写一个简易的react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">手写一个简易的react</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/" class="archive-article-date">
-  	<time datetime="2021-06-01T02:14:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>手写一个简单的react,实现了简单的fiber以优化渲染,添加了useState和useEffect的实现<a target="_blank" rel="noopener" href="https://github.com/panduopd/famousLibs">github-&gt;</a></p>
-        
-          <a class="article-more-a" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -974,8 +336,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
