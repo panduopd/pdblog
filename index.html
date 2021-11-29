@@ -261,7 +261,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>鉴于前端ci过程npm i过于漫长(本地使用verdaccio搭建仓库, node_modules依赖过多, 1个多g), 即使走局域网也要几分钟。</p>
+<p>鉴于前端ci过程npm i过于漫长(本地使用verdaccio搭建仓库， node_modules依赖过多，1个多g)， 即使走局域网也要几分钟。</p>
+<p>而多个产品线全部为基于umi antd的相同架构， 且ui库版本不经常变动， 所以决定将所有基础库写入镜像， ci时只安装必要的私有库。</p>
+<p>生成node镜像的文件夹中的package.json包含了所有的基础库， eslint和babel等环境库， 需要注意的是有些库是依赖于其他库且会生成额外的配置， 如umi，相对应的 @umijs/preset-react需要在ci过程中安装以保证配置正常生成。</p>
+<p>node镜像Dockerfile:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在/nc-npm-lib下安装基础库, 生成node_modules</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">ENV</span> CACHEDIR /nc-npm-lib</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$&#123;CACHEDIR&#125;</span></span></span><br><span class="line"><span class="keyword">ADD</span><span class="bash"> .  <span class="variable">$&#123;CACHEDIR&#125;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> npm i -g cnpm</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> cnpm i</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>git提交, 生成node镜像并保存在镜像库中, 命名为NodeWithBasicLib</p>
+<hr>
+<p><br>所有ci过程使用 NodeWithBasicLib 镜像<br>将package.json中的基础库依赖删除，只保留私有库</p>
+<p>ci.yml配置在cnpm i之前<code>ln -s /nc-npm-lib/node_modules .</code></p>
+<p>以lint阶段为例，总耗时由7分钟降至40秒。</p>
+<p>若后续由基础组件版本升级， 调整公共镜像即可。</p>
 
       
 
