@@ -60,7 +60,7 @@
 	        
 				<li><a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
 	        
-				<li><a href="/tags/Server/">Server</a></li>
+				<li><a href="/categories/%E7%BE%8E%E9%A3%9F%E8%AE%B0/">美食记</a></li>
 	        
 				<li><a href="/categories/%E4%B9%A6%E7%AD%BE/">书签</a></li>
 	        
@@ -146,7 +146,7 @@
 		        
 					<li style="width: 25%"><a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/Server/">Server</a></li>
+					<li style="width: 25%"><a href="/categories/%E7%BE%8E%E9%A3%9F%E8%AE%B0/">美食记</a></li>
 		        
 					<li style="width: 25%"><a href="/categories/%E4%B9%A6%E7%AD%BE/">书签</a></li>
 		        
@@ -164,6 +164,82 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-手写一个简易的react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">手写一个简易的react</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/" class="archive-article-date">
+  	<time datetime="2021-06-01T02:14:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>手写一个简单的react,实现了简单的fiber以优化渲染,添加了useState和useEffect的实现<a target="_blank" rel="noopener" href="https://github.com/panduopd/famousLibs">github-&gt;</a></p>
+        
+          <a class="article-more-a" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84react/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-手写一个webpack-loader" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -877,92 +953,9 @@
 
 
   
-    <article id="post-在gitlab-ci中使用puppeteer进行e2e测试-基于antd-pro-v5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">在gitlab ci中使用puppeteer进行e2e测试(基于antd pro v5)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/" class="archive-article-date">
-  	<time datetime="2020-10-29T07:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h1 id="基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错："><a href="#基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错：" class="headerlink" title="基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错："></a>基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错：</h1><p><img src="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/error.png" alt="报错"></p>
-<ul>
-<li>本地开发环境没有此问题</li>
-<li>ci使用的docker镜像为node 15 </li>
-<li>查阅资料发现是因为chrome在进行headless测试时,需要安装一些依赖;  <a target="_blank" rel="noopener" href="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker">参考</a></li>
-</ul>
-<h1 id="使用gitlab生成安装有完全依赖的centos镜像-用于ci测试"><a href="#使用gitlab生成安装有完全依赖的centos镜像-用于ci测试" class="headerlink" title="使用gitlab生成安装有完全依赖的centos镜像 用于ci测试"></a>使用gitlab生成安装有完全依赖的centos镜像 用于ci测试</h1>
-        
-          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -974,7 +967,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 PPPddd
+    		&copy; 2022 PPPddd
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
