@@ -165,6 +165,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-自动获取组件代码用于交互组件说明文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/">自动获取组件代码用于交互组件说明文档</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" class="archive-article-date">
+  	<time datetime="2022-03-03T07:24:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>– 要做一个交互式组件的展示工具, 同时提供代码的copy。</p>
+<p>搭建了一个架子， 在某一个页面写一些组件用于展示(就像平时开发一样), 然后提供一个按钮 展开可以看到这个页面的全部代码 (参考antd组件文档)。</p>
+<p>这个工具是要使用webpack打包成静态的文件, 所以不能使用node的fs。</p>
+<p>想了一下, webpack的loader可以获取到目标文件的完整内容, 可以约定一下文件格式, 比如导出的组件统一叫做Comp, 然后<code>export default Comp</code>。 这样就可以批量为Comp附加一个<code>text</code>字段来自动为组件注入代码片段。</p>
+<hr>
+        
+          <a class="article-more-a" href="/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-家常鲤鱼" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -504,7 +584,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>echarts全国城市地图注册</p>
-<p>json转js批量操作</p>
+<p>网上找到的资源都只有json, 没有直接可用的地图js, 所以用php写了个json转js的批量操作。</p>
 <p><a target="_blank" rel="noopener" href="https://download.csdn.net/download/weixin_39150852/12267613">json下载地址</a></p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">  <span class="variable">$dirPath</span> = <span class="string">&#x27;/opt/ncompass/web/ncompass/public/assets/js/echarts/&#x27;</span>;</span><br><span class="line">  <span class="variable">$dir</span> = <span class="variable">$dirPath</span>.<span class="string">&#x27;cities/&#x27;</span>;</span><br><span class="line">  <span class="variable">$citysMapping</span> = file_get_contents(<span class="variable">$dir</span>.<span class="string">&#x27;china-main-city-map.js&#x27;</span>);</span><br><span class="line">  <span class="variable">$citysMapping</span> = str_replace([<span class="string">&#x27;var cityMap = &#x27;</span>, <span class="string">&#x27;// ??&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>,PHP_EOL], <span class="string">&#x27;&#x27;</span>, <span class="variable">$citysMapping</span>);</span><br><span class="line">  <span class="variable">$citysMapping</span> = json_decode(<span class="variable">$citysMapping</span>);</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fileTarget</span> = <span class="variable">$dirPath</span>.<span class="string">&#x27;citiesJs/&#x27;</span>;</span><br><span class="line">  <span class="keyword">foreach</span> (<span class="variable">$citysMapping</span> <span class="keyword">as</span> <span class="variable">$city_name</span> =&gt; <span class="variable">$city_code</span>) &#123;</span><br><span class="line">    <span class="variable">$city_name</span> = str_replace([<span class="string">&#x27;县&#x27;</span>,<span class="string">&#x27;市&#x27;</span>], <span class="string">&#x27;&#x27;</span>, <span class="variable">$city_name</span>);</span><br><span class="line">    <span class="variable">$json</span> = file_get_contents(<span class="variable">$dir</span>.<span class="variable">$city_code</span>.<span class="string">&#x27;.json&#x27;</span>);</span><br><span class="line">    <span class="variable">$partern</span> = <span class="string">&#x27;/[\x&#123;00a0&#125;\x&#123;1680&#125;\x&#123;2000&#125;-\x&#123;200a&#125;\x&#123;2028&#125;\x&#123;2029&#125;\x&#123;202f&#125;\x&#123;205f&#125;\x&#123;3000&#125;\x&#123;feff&#125;\x&#123;2060&#125;\x&#123;3164&#125;]/u&#x27;</span>; <span class="comment">//去除bom头</span></span><br><span class="line">    <span class="variable">$json</span> = preg_replace(<span class="variable">$partern</span>, <span class="string">&#x27;&#x27;</span>, <span class="variable">$json</span>);</span><br><span class="line">    <span class="comment">// dd($json);</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="variable">$json</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="variable">$newJSFormat</span> = &lt;&lt;&lt;AAA</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params">root, factory</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (typeof define === <span class="string">&#x27;function&#x27;</span> &amp;&amp; define.amd) &#123;</span><br><span class="line">        <span class="comment">// AMD. Register as an anonymous module.</span></span><br><span class="line">        define([<span class="string">&#x27;exports&#x27;</span>, <span class="string">&#x27;echarts&#x27;</span>], factory);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (typeof exports === <span class="string">&#x27;object&#x27;</span> &amp;&amp; typeof exports.nodeName !== <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// CommonJS</span></span><br><span class="line">        factory(exports, <span class="keyword">require</span>(<span class="string">&#x27;echarts&#x27;</span>));</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Browser globals</span></span><br><span class="line">        factory(&#123;&#125;, root.echarts);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;(this, <span class="function"><span class="keyword">function</span> (<span class="params">exports, echarts</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (typeof console !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">          console &amp;&amp; console.<span class="built_in">error</span> &amp;&amp; console.<span class="built_in">error</span>(msg);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!echarts) &#123;</span><br><span class="line">        log(<span class="string">&#x27;ECharts is not Loaded&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!echarts.registerMap) &#123;</span><br><span class="line">        log(<span class="string">&#x27;ECharts Map is not loaded&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      echarts.registerMap(<span class="string">&#x27;$&#123;city_name&#125;&#x27;</span>,$&#123;json&#125;)</span><br><span class="line">    &#125;));</span><br><span class="line">AAA;</span><br><span class="line">    <span class="variable">$filename</span> = <span class="variable">$fileTarget</span>.<span class="variable">$city_code</span>.<span class="string">&#x27;.js&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span>(!file_exists(<span class="variable">$filename</span>)) &#123;</span><br><span class="line">      @file_put_contents(<span class="variable">$filename</span>, <span class="variable">$newJSFormat</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
       
@@ -855,86 +935,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-手写一个生成react组件的构建工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">手写一个生成react组件的构建工具</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-03T08:44:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>书接上文:   <a href="/2021/06/02/%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8Breact%E7%BB%84%E4%BB%B6%E7%9A%84%E5%AE%8C%E6%95%B4%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">整理一下react组件的开发流程</a></p>
-</blockquote>
-<p>随笔</p>
-<p>打算写一个简易的脚手架，提供一些目录结构生成、server、测试、打包等命令，方便组件编写。（ 所以说懒惰是人类文明进步的真正动力 :)  ）<br>形式上还是采用npm包， 发布在私有npm库中。</p>
-        
-          <a class="article-more-a" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/03/%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90react%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">展开全文 >></a>
         </p>
       
 

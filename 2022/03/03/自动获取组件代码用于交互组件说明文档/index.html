@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://panduo.site">
-  <title>潘铎的博客</title>
+  <title>自动获取组件代码用于交互组件说明文档 | 潘铎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="day day up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="潘铎的博客">
-<meta property="og:url" content="http://panduo.site/page/3/index.html">
+  <meta name="description" content="– 要做一个交互式组件的展示工具, 同时提供代码的copy。 搭建了一个架子， 在某一个页面写一些组件用于展示(就像平时开发一样), 然后提供一个按钮 展开可以看到这个页面的全部代码 (参考antd组件文档)。 这个工具是要使用webpack打包成静态的文件, 所以不能使用node的fs。 想了一下, webpack的loader可以获取到目标文件的完整内容, 可以约定一下文件格式, 比如导出的组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动获取组件代码用于交互组件说明文档">
+<meta property="og:url" content="http://panduo.site/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/index.html">
 <meta property="og:site_name" content="潘铎的博客">
-<meta property="og:description" content="day day up">
+<meta property="og:description" content="– 要做一个交互式组件的展示工具, 同时提供代码的copy。 搭建了一个架子， 在某一个页面写一些组件用于展示(就像平时开发一样), 然后提供一个按钮 展开可以看到这个页面的全部代码 (参考antd组件文档)。 这个工具是要使用webpack打包成静态的文件, 所以不能使用node的fs。 想了一下, webpack的loader可以获取到目标文件的完整内容, 可以约定一下文件格式, 比如导出的组">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-03T07:24:50.000Z">
+<meta property="article:modified_time" content="2022-03-03T07:53:59.150Z">
 <meta property="article:author" content="PPPddd">
-<meta property="article:tag" content="123">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
   
   
@@ -163,37 +165,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-动态加载react组件的一个小问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-自动获取组件代码用于交互组件说明文档" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDreact%E7%BB%84%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/">动态加载react组件的一个小问题</a>
+    <h1 class="article-title" itemprop="name">
+      自动获取组件代码用于交互组件说明文档
     </h1>
   
 
         
-        <a href="/2020/11/03/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDreact%E7%BB%84%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-11-03T12:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
+        <a href="/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" class="archive-article-date">
+  	<time datetime="2022-03-03T07:24:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>antd pro 基于路由参数动态加载组件,使用require</p>
-<blockquote>
-<p>多个不同参数的路由汇集到一个入口</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">&#x27;@/pages/CommonList/Context&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (props: any): React.ReactNode =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> portrait_type: string = props.route.name;</span><br><span class="line">  <span class="keyword">const</span> MatchedComp = <span class="built_in">require</span>(<span class="string">`./<span class="subst">$&#123;portrait_type&#125;</span>/index`</span>).default; <span class="comment">//这里如果是直接export default xx;导出的 需要使用default获取</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Provider&gt;</span><br><span class="line">      &lt;MatchedComp&gt;&lt;/MatchedComp&gt;</span><br><span class="line">    &lt;/Provider&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/11/03/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDreact%E7%BB%84%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/#more">more >></a>
-        
+        <p>– 要做一个交互式组件的展示工具, 同时提供代码的copy。</p>
+<p>搭建了一个架子， 在某一个页面写一些组件用于展示(就像平时开发一样), 然后提供一个按钮 展开可以看到这个页面的全部代码 (参考antd组件文档)。</p>
+<p>这个工具是要使用webpack打包成静态的文件, 所以不能使用node的fs。</p>
+<p>想了一下, webpack的loader可以获取到目标文件的完整内容, 可以约定一下文件格式, 比如导出的组件统一叫做Comp, 然后<code>export default Comp</code>。 这样就可以批量为Comp附加一个<code>text</code>字段来自动为组件注入代码片段。</p>
+<hr>
+<a id="more"></a>
+
+<p>暂定这些展示组件的文件名后缀为<code>.codedemo</code></p>
+<p>以一个最简单的按钮展示为例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// display.codedemo</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Button &#125; <span class="keyword">from</span> <span class="string">&#x27;xxx ui-lib&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Comp = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;display.codedemo&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;Button type=<span class="string">&#x27;action&#x27;</span>&gt;action&lt;/Button&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Comp</span><br></pre></td></tr></table></figure>
+<p>创建一个loader npm包, 取名为<code>codedemo-loader</code>, 其下index.js如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">source</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> s = source</span><br><span class="line">  s = s.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">  s.push(<span class="string">&#x27;export const text = `&#x27;</span>+source+<span class="string">&#x27;`;&#x27;</span>)</span><br><span class="line">  s = s.join(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> s</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在webpack中添加一个.codedemo的处理方法。 另需要单独处理下jsx格式, 在.babelrc的presets中添加<code>@babel/preset-react</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.codedemo$/</span>,</span><br><span class="line">  use: [&#123;</span><br><span class="line">    loader: <span class="string">&#x27;babel-loader&#x27;</span>,</span><br><span class="line">    options: &#123;</span><br><span class="line">      plugins: [</span><br><span class="line">        [<span class="string">&#x27;import&#x27;</span>, &#123; <span class="attr">libraryName</span>: <span class="string">&#x27;antd&#x27;</span>, <span class="attr">style</span>: <span class="string">&#x27;css&#x27;</span> &#125;],</span><br><span class="line">      ],</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;, <span class="string">&#x27;codedemo-loader&#x27;</span>],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<hr>
+<p>重新启动webpack devServer, 引入.codedemo文件, 此时已经可以获取到text。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Display, &#123; text &#125; <span class="keyword">from</span> <span class="string">&#x27;./display.codedemo&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -215,83 +225,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/03/%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDreact%E7%BB%84%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
 
       
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-猫片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/29/%E7%8C%AB%E7%89%87/">猫片</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/29/%E7%8C%AB%E7%89%87/" class="archive-article-date">
-  	<time datetime="2020-10-29T09:00:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-    <iframe src="//player.bilibili.com/player.html?aid=83620030&bvid=BV1PJ411n7QD&cid=143045092&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+      </div>
+    </span>
+  </div>
 </div>
 
-
-      
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://panduo.site/2022/03/03/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E4%BB%A3%E7%A0%81%E7%94%A8%E4%BA%8E%E4%BA%A4%E4%BA%92%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+</div>
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/29/%E7%8C%AB%E7%89%87/">展开全文 >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/01/24/%E5%AE%B6%E5%B8%B8%E9%B2%A4%E9%B1%BC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">家常鲤鱼</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,95 +313,14 @@
 
 
 
-
-  
-    <article id="post-在gitlab-ci中使用puppeteer进行e2e测试-基于antd-pro-v5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">在gitlab ci中使用puppeteer进行e2e测试(基于antd pro v5)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/" class="archive-article-date">
-  	<time datetime="2020-10-29T07:51:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h1 id="基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错："><a href="#基于antd-pro-v5-搭建的项目-直接进行ci测试的时候。puppeteer加载chromium-process会报错：" class="headerlink" title="基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错："></a>基于antd pro v5 搭建的项目 直接进行ci测试的时候。puppeteer加载chromium process会报错：</h1><p><img src="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/error.png" alt="报错"></p>
-<ul>
-<li>本地开发环境没有此问题</li>
-<li>ci使用的docker镜像为node 15 </li>
-<li>查阅资料发现是因为chrome在进行headless测试时,需要安装一些依赖;  <a target="_blank" rel="noopener" href="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker">参考</a></li>
-</ul>
-<h1 id="使用gitlab生成安装有完全依赖的centos镜像-用于ci测试"><a href="#使用gitlab生成安装有完全依赖的centos镜像-用于ci测试" class="headerlink" title="使用gitlab生成安装有完全依赖的centos镜像 用于ci测试"></a>使用gitlab生成安装有完全依赖的centos镜像 用于ci测试</h1>
-        
-          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/29/%E5%9C%A8gitlab-ci%E4%B8%AD%E4%BD%BF%E7%94%A8puppeteer%E8%BF%9B%E8%A1%8Ce2e%E6%B5%8B%E8%AF%95-%E5%9F%BA%E4%BA%8Eantd-pro-v5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -422,8 +343,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
