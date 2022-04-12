@@ -165,6 +165,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux打印99乘法表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/12/linux%E6%89%93%E5%8D%B099%E4%B9%98%E6%B3%95%E8%A1%A8/">linux打印99乘法表</a>
+    </h1>
+  
+
+        
+        <a href="/2022/04/12/linux%E6%89%93%E5%8D%B099%E4%B9%98%E6%B3%95%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2022-04-12T10:22:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>分析一个打印99乘法表的命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">seq 9 | sed &#x27;H;g&#x27; | awk -v RS=&#x27;&#x27; &#x27;&#123;for(i=1;i&lt;=NF;i++)printf(&quot;%dx%d=%d%s&quot;, $i, NR, $i*NR, i==NF?&quot;\n&quot;:&quot;\t&quot;)&#125;&#x27;</span><br></pre></td></tr></table></figure>
+<hr>
+        
+          <a class="article-more-a" href="/2022/04/12/linux%E6%89%93%E5%8D%B099%E4%B9%98%E6%B3%95%E8%A1%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/12/linux%E6%89%93%E5%8D%B099%E4%B9%98%E6%B3%95%E8%A1%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-自动获取组件代码用于交互组件说明文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -861,80 +939,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/07/07/css-conic-gradient-%E8%A7%92%E5%90%91%E6%B8%90%E5%8F%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-flex为什么没有justify-self" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">flex为什么没有justify-self</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/" class="archive-article-date">
-  	<time datetime="2021-06-28T08:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties">此问题下的第一个答案</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/28/flex%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E6%9C%89justify-self/">展开全文 >></a>
         </p>
       
 
