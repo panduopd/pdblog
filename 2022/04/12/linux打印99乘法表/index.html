@@ -16,7 +16,7 @@
 <meta property="og:description" content="分析一个打印99乘法表的命令： 1seq 9 | sed &amp;#x27;H;g&amp;#x27; | awk -v RS&#x3D;&amp;#x27;&amp;#x27; &amp;#x27;&amp;#123;for(i&#x3D;1;i&lt;&#x3D;NF;i++)printf(&quot;%dx%d&#x3D;%d%s&quot;, $i, NR, $i*NR, i&#x3D;&#x3D;NF?&quot;\n&quot;:&quot;\t&quot;)&amp;#125;&amp;#x27;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-12T10:22:30.000Z">
-<meta property="article:modified_time" content="2022-04-12T11:13:32.831Z">
+<meta property="article:modified_time" content="2022-04-13T01:30:41.678Z">
 <meta property="article:author" content="PPPddd">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,7 @@
 <p>hold buffer不断增加, 每一行的hold buffer均包含了前面所有的数字</p>
 <hr>
 <p>之后使用awk来处理上面的结果。 <code>awk -v RS=&#39;&#39;</code>  RS为AWK的内建变量， 代表记录分隔符， 这里将RS设置为空字符串来取代换行， 可以使得上面的1..9 横向排列</p>
-<p><code>seq 9 | sed &#39;H;g&#39; | awk -v RS=&#39;&#39; &#39;&#123;print $1, $2, $3&#125;&#39;</code><br>这个命令执行的结果如下：</p>
+<p><code>seq 3 | sed &#39;H;g&#39; | awk -v RS=&#39;&#39; &#39;&#123;print $1, $2, $3&#125;&#39;</code><br>这个命令执行的结果如下：</p>
 <p>1    （NR = 1, NF = 1）<br>1 2  （NR = 2, NF = 2）<br>1 2 3（NR = 3, NF = 3）</p>
 <p><code>NR</code> 为awk的另一个内建变量 表示行号 从1开始<br><code>NF</code> 也是内建变量  表示当前行的字段数， 也就是空格分隔的列有多少</p>
 <hr>
