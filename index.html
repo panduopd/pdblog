@@ -165,6 +165,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-vscode-tsx-template" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/10/vscode-tsx-template/">vscode tsx template</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/10/vscode-tsx-template/" class="archive-article-date">
+  	<time datetime="2022-08-10T09:16:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>备忘。 一个vscode tsx格式 form内部组件模板</p>
+        
+          <a class="article-more-a" href="/2022/08/10/vscode-tsx-template/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/10/vscode-tsx-template/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-一个密码验证正则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -873,89 +949,6 @@
 
 
   
-    <article id="post-浏览器播放rtp流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/">浏览器播放rtp流</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/" class="archive-article-date">
-  	<time datetime="2021-08-25T02:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>webrtc 更方便做浏览器双端通信.</p>
-<p>使用ffmpeg来进行rtp流的转码(提前将video.m3u8存储目录映射到宿主机)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -i ffmpeg ffmpeg -i <span class="string">&quot;tcp://xxxx:8088&quot;</span> -y -q 0 -codec:v libx264 -s 960x600 -r 25.0 -g 50 -an -map 0 -f hls -hls_list_size 10 -hls_wrap 15 -hls_time 10 -preset ultrafast /xxx/video.m3u8</span><br></pre></td></tr></table></figure>
-<p>点击播放按钮, 浏览器发出ajax请求查询目标视频目录是否已经有相应m3u8文件(其他用户已经请求过此视频id)</p>
-<p>如果有则不需要进行额外的转码动作,直接提取此文件地址</p>
-<p>若此用户为第一个访问者, 在服务端运行上述docker命令开始进行对应rtp流的解析, </p>
-<p>while循环直到目标m3u8文件生成或超时, 更新下此文件当前访问人数(可以使用文件记录) ,返回相应信息到浏览器</p>
-<p>浏览器前端进行报错或者使用video.js开始进行m3u8的播放</p>
-<p>用户关闭浏览器页签时, 通知服务器更新此页面所有已播放视频的访问人数, 若某一视频访问人数为0, 则停止rtp流解析 同时删除对应的m3u8及ts文件</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%92%AD%E6%94%BErtp%E6%B5%81/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -970,7 +963,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2042 PPPddd
+    		&copy; 2022 PPPddd
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
