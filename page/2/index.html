@@ -33,7 +33,7 @@
 
   
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -164,6 +164,82 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-echarts-全国城市地图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/">echarts-全国城市地图</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/" class="archive-article-date">
+  	<time datetime="2021-11-02T09:16:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>echarts全国城市地图注册</p>
+<p>网上找到的资源都只有json, 没有直接可用的地图js, 所以用php写了个json转js的批量操作。</p>
+<p><a target="_blank" rel="noopener" href="https://download.csdn.net/download/weixin_39150852/12267613">json下载地址</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">  <span class="variable">$dirPath</span> = <span class="string">&#x27;/opt/ncompass/web/ncompass/public/assets/js/echarts/&#x27;</span>;</span><br><span class="line">  <span class="variable">$dir</span> = <span class="variable">$dirPath</span>.<span class="string">&#x27;cities/&#x27;</span>;</span><br><span class="line">  <span class="variable">$citysMapping</span> = file_get_contents(<span class="variable">$dir</span>.<span class="string">&#x27;china-main-city-map.js&#x27;</span>);</span><br><span class="line">  <span class="variable">$citysMapping</span> = str_replace([<span class="string">&#x27;var cityMap = &#x27;</span>, <span class="string">&#x27;// ??&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>,PHP_EOL], <span class="string">&#x27;&#x27;</span>, <span class="variable">$citysMapping</span>);</span><br><span class="line">  <span class="variable">$citysMapping</span> = json_decode(<span class="variable">$citysMapping</span>);</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fileTarget</span> = <span class="variable">$dirPath</span>.<span class="string">&#x27;citiesJs/&#x27;</span>;</span><br><span class="line">  <span class="keyword">foreach</span> (<span class="variable">$citysMapping</span> <span class="keyword">as</span> <span class="variable">$city_name</span> =&gt; <span class="variable">$city_code</span>) &#123;</span><br><span class="line">    <span class="variable">$city_name</span> = str_replace([<span class="string">&#x27;县&#x27;</span>,<span class="string">&#x27;市&#x27;</span>], <span class="string">&#x27;&#x27;</span>, <span class="variable">$city_name</span>);</span><br><span class="line">    <span class="variable">$json</span> = file_get_contents(<span class="variable">$dir</span>.<span class="variable">$city_code</span>.<span class="string">&#x27;.json&#x27;</span>);</span><br><span class="line">    <span class="variable">$partern</span> = <span class="string">&#x27;/[\x&#123;00a0&#125;\x&#123;1680&#125;\x&#123;2000&#125;-\x&#123;200a&#125;\x&#123;2028&#125;\x&#123;2029&#125;\x&#123;202f&#125;\x&#123;205f&#125;\x&#123;3000&#125;\x&#123;feff&#125;\x&#123;2060&#125;\x&#123;3164&#125;]/u&#x27;</span>; <span class="comment">//去除bom头</span></span><br><span class="line">    <span class="variable">$json</span> = preg_replace(<span class="variable">$partern</span>, <span class="string">&#x27;&#x27;</span>, <span class="variable">$json</span>);</span><br><span class="line">    <span class="comment">// dd($json);</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="variable">$json</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="variable">$newJSFormat</span> = &lt;&lt;&lt;AAA</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params">root, factory</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (typeof define === <span class="string">&#x27;function&#x27;</span> &amp;&amp; define.amd) &#123;</span><br><span class="line">        <span class="comment">// AMD. Register as an anonymous module.</span></span><br><span class="line">        define([<span class="string">&#x27;exports&#x27;</span>, <span class="string">&#x27;echarts&#x27;</span>], factory);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (typeof exports === <span class="string">&#x27;object&#x27;</span> &amp;&amp; typeof exports.nodeName !== <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// CommonJS</span></span><br><span class="line">        factory(exports, <span class="keyword">require</span>(<span class="string">&#x27;echarts&#x27;</span>));</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Browser globals</span></span><br><span class="line">        factory(&#123;&#125;, root.echarts);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;(this, <span class="function"><span class="keyword">function</span> (<span class="params">exports, echarts</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (typeof console !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">          console &amp;&amp; console.<span class="built_in">error</span> &amp;&amp; console.<span class="built_in">error</span>(msg);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!echarts) &#123;</span><br><span class="line">        log(<span class="string">&#x27;ECharts is not Loaded&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (!echarts.registerMap) &#123;</span><br><span class="line">        log(<span class="string">&#x27;ECharts Map is not loaded&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      echarts.registerMap(<span class="string">&#x27;$&#123;city_name&#125;&#x27;</span>,$&#123;json&#125;)</span><br><span class="line">    &#125;));</span><br><span class="line">AAA;</span><br><span class="line">    <span class="variable">$filename</span> = <span class="variable">$fileTarget</span>.<span class="variable">$city_code</span>.<span class="string">&#x27;.js&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span>(!file_exists(<span class="variable">$filename</span>)) &#123;</span><br><span class="line">      @file_put_contents(<span class="variable">$filename</span>, <span class="variable">$newJSFormat</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/02/echarts-%E5%85%A8%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%9C%B0%E5%9B%BE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-浏览器播放rtp流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -882,81 +958,6 @@
 
 
   
-    <article id="post-A-Complete-Guide-to-useEffect" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/02/A-Complete-Guide-to-useEffect/">A Complete Guide to useEffect</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/02/A-Complete-Guide-to-useEffect/" class="archive-article-date">
-  	<time datetime="2021-03-02T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a target="_blank" rel="noopener" href="https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/">A Complete Guide to useEffect</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/书签//" class="article-tag-list-link color3">书签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/02/A-Complete-Guide-to-useEffect/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -971,7 +972,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 PPPddd
+    		&copy; 2023 PPPddd
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
